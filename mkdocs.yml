@@ -1,1 +1,35 @@
-site_name: My Docs
+site_name: SPB-GS Docs
+site_url: http://docs.eyesdeep.blue
+
+theme:
+  name: material
+  language: ru
+  palette: 
+    scheme: default
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tracking
+    - toc.follow
+    - toc.integrate
+
+plugins:
+  - offline:
+      enabled: true
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      fallback_to_default: true
+      languages:
+        - locale: ru
+          default: true
+          name: Русский
+          build: true
+          link: /
+        - locale: en
+          name: English
+          build: true
+          link: /en/
+  - search
+  - awesome-nav
