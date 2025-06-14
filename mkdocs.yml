@@ -3,13 +3,31 @@ site_url: http://docs.eyesdeep.blue
 
 theme:
   name: material
+  icon:
+    annotation: material/help-circle
   language: ru
-  palette: 
-    scheme: default
-    primary: indigo
-    accent: indigo
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light blue
+      accent: deep orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to system preference
   features:
     - navigation.tracking
+    - navigation.instant
     - toc.follow
     - toc.integrate
 
@@ -33,3 +51,13 @@ plugins:
           link: /en/
   - search
   - awesome-nav
+  - autorefs
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
