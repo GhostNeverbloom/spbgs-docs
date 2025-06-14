@@ -1,2 +1,5 @@
 nav:
+  - index.md
   - commands.md
+  - customspawns.md
+  - aidifficulty.md
