@@ -52,6 +52,7 @@ plugins:
   - search
   - awesome-nav
   - autorefs
+
 markdown_extensions:
   - attr_list
   - md_in_html
