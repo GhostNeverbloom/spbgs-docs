@@ -7,3 +7,9 @@
 ## Dev build
 
 `mkdocs serve`
+
+## Docker build
+
+`docker compose up -d --build`
+
+Default port: 5001
