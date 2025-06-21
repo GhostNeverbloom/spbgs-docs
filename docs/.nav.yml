@@ -1,5 +1,8 @@
 nav:
   - index.md
   - commands.md
+  - authoritylevels.md
+  - managementbasics.md
   - customspawns.md
   - aidifficulty.md
+  - hoeplus.md
