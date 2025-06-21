@@ -1,0 +1,11 @@
+services:
+  docs:
+    container_name: spbgs-docs
+    init: true
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '5001:80/tcp'
+    working_dir: /app
