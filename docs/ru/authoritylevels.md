@@ -37,6 +37,9 @@ For safety reasons the accessibility of certain commands is different across the
 | [!st](commands.md#skip-trader) | Helper | Helper | `False` | `False` |
 | [!kz](commands.md#kill-zeds) | Helper | Helper | `True` | `True` |
 | [!nm](commands.md#next-map) | Helper | Helper | `True` | `True` |
+| [!scw](commands.md#set-current-wave) | Moderator | Moderator | `False` | `False` |
+| [!ew](commands.md#end-wave) | Moderator | Moderator | `False` | `True` |
+| [!nw](commands.md#next-wave) | Moderator | Moderator | `False` | `False` |
 | [!mv](commands.md#map-vote) | Moderator | Moderator | `True` | `True` |
 | [!spw](commands.md#set-password) | Helper | Helper | `False` | `False` |
 | [!mm](commands.md#max-monsters) | Helper | Helper | `True` | `True` |

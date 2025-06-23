@@ -80,7 +80,10 @@ These commands are available for everyone to use without any limitations.
 | [](){ #unpause-trader }unpausetrader | upt | | Resumes trader time |
 | [](){ #skip-trader }skiptrader | st | | Skips trader time; not available for voting because vanilla skip trader option exists |
 | [](){ #kill-zeds }killzeds | kz | | Kills 5 alive zeds; has 180s long usage cooldown. Use when need to kiil stuck zeds on certain maps |
-| [](){ #next-map }nextmap | nm | `<KF-MapName>` | Instantly switches current map to the specified one |
+| [](){ #next-map }nextmap | nm | | Instantly switches current map to the specified one |
+| [](){ #set-current-wave }setcurrentwave | scw | `<number>` | Starts a wave specified by its number |
+| [](){ #end-wave }endwave | ew | | Ends current wave |
+| [](){ #next-wave }nextwave | nw | `<number>` | Sets next wave to the specified one |
 | [](){ #map-vote }mapvote | mv | | Forces end of current match and enables map selection vote |
 | [](){ #set-password }setpassword | spw | `<password>` | Sets temporary password for the current match; resets to `none` when entered without an argument or when match ends |
 
