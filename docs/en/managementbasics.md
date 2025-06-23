@@ -37,9 +37,9 @@ If you're a CD player and actively use such commands, it's recommended to bind t
 
 ## What commands?
 
-There's plenty of commands available to use, though you certainly don't need all of them to spend time on the servers.
+There's plenty of commands available to use, but of course you don't need all of them to spend time on the servers.
 
-What makes the most difference in terms of difficulty?
+But the question is, what makes the most difference in terms of difficulty?
 
 ### Max Monsters
 
@@ -67,16 +67,28 @@ Vanilla 6-player match has this value capped at 32 (36 on SPB-GS), while default
 [`!sscp`](commands.md#special-squad-count-pct) or [`Special Squad Count Percentage`](commands.md#special-squad-count-pct) is your best friend in terms of difficulty adjustments when it comes to HoE+ gameplay.
 This is where most of the magic happens since more Mediums and Larges essentially means more challenge. As mentioned [here](customspawns.md), this option is enabled by default on all HoE+ servers and disabled on Vanilla for obvious reasons.
 
-* Since quality and quantity of the zeds define the game difficulty, you might want to adjust this setting in order for it to fit the current lobby's needs, which means as increasing the values so its lowering.
+* Since quality and quantity of the zeds define most of the game difficulty, you might want to adjust this setting in order for it to fit the current lobby's needs, which means as increasing the values so its lowering.
 
 * The default values are usually enough for most of the pub players' needs, but sometimes there's enough trusted people in the lobby to raise the stakes and try something more challenging, so having 0.5-0.7 (or 50-75%) of special squads might be a good challenge.
 
-* I encourage you to not crank it up just for shits and giggles, because playing a coop game means respecting the preference of your teammates; if you happen to have higher authority level, please ask your teammates whether they want it if you're not sure about it.
+* I encourage you to __not__ crank it up just for shits and giggles, because playing a coop game means respecting the preference of your teammates; if you happen to have higher authority level, please ask your teammates whether they want it if you're not sure about it.
 
-* I know most of the playerbase on Precision servers, so I'm familiar with these people's performance and can tell whether it's alright to set certain settings; however you may not be like me in this regard, so you are the only person responsible for your actions.
+* I know most of the playerbase on Precision servers, so I'm familiar with these people's performance and can tell whether it's alright to set certain settings; however you may not be like me in this regard, so you are the only person responsible for your actions; keep this in mind when changing this setting.
 
 * While it's still technically possible to enable `!sscp` on Vanilla, I don't recommend doing this because it drastically changes the feel of the game and contradicts the whole idea of dividing the servers onto Vanilla and HoE+; you better just go on HoE+ and lower the settings there if they're too high for your liking.
 
 ### AI Difficulty
 
-vsem privet
+[AI Difficulty](aidifficulty.md) system is responsible for various zed presets, rounding up the final difficulty level that you can achieve on the servers.
+
+If not enabled by default, it can be switched on by setting [`!dcad`](commands.md#disable-custom-ai-difficulty) to `false`, and adjusted with [`!ad`](commands.md#ai-difficulty) set to proper [index](aidifficulty.md#available-presets).
+
+!!! info "As mentioned [here](aidifficulty.md#available-presets), not all presets are available on Vanilla servers for safety reasons."
+
+* [`!dcad`](commands.md#disable-custom-ai-difficulty) set to `false` enables the system, `true` turns it off; enabled by default on Precision/HoE+ servers.
+
+* [`!ad`](commands.md#ai-difficulty) [`<index>`](aidifficulty.md#available-presets) sets the current difficulty preset, applying changes instantly.
+
+* Changing this setting makes the huge difference in terms of difficulty, so please be mindful of that whenever and with whoever you play.
+
+* It is not recommended to play anything beyond [`Pivo`](aidifficulty.md#ai-difficulty-presets) if there's no proper lobby for it, especially if there's less than 6 players, because that's one way to end up wiped out relentlessly. Note my words.

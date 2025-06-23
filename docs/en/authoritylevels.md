@@ -1,5 +1,7 @@
 # Authority Levels
 
+## Basics
+
 All chat commands work under the authority level system. This is how it works:
 
 * All commands have certain level of authority needed for them to be executed;

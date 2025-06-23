@@ -436,31 +436,41 @@ These commands won't work on those players who are logged in as server admins.
 !!! example "Examples by value type"
 
     === "Integer"
-	
-	    * `!mm 48`
 
-        * `!wavesize 160`
+	    * __`!ad 3`__
+
+        * `!mm 48`
+
+        * __`!wavesize 160`__
 
     === "Float"
 
-	    * `!sscp 0.5`
+	    * __`!sscp 0.5`__
 
-	    * `!ammomultiplier 2.5`
+        * __`!lzsc 0.05`__
+
+	    * __`!ammomultiplier 2.5`__
 
     === "Boolean"
 
-	    * `!dlzsc true`
+	    * __`!dcad false`__
 
-	    * `lockweaponpickup false`
+        * __`!dlzsc true`__
+
+	    * __`lockweaponpickup false`__
 
     === "String/Enum"
 
-	    * `!nm kf-nuked`
+	    * __`!nm kf-nuked`__
 
-	    * `!stats hsacc`
+	    * __`!stats hsacc`__
+
+        * __`!spw penis228`__
 
     === "Multi-value"
 
-	    * `!friendlyfire all 0.5`
+	    * __`!friendlyfire all 0.5`__
 
-	    * `!bp 128 5`
+	    * __`!bp 128 5`__
+
+        * __`!kill me`__

@@ -1,3 +1,3 @@
-# Hell on Earth+ (HoE+) Basics
+# Hell on Earth+ Basics
 
-TBD
+Hey, this section is incomplete. Sadge!

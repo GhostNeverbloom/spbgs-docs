@@ -6,6 +6,8 @@ If you're ended up here, most likely you're familiar enough with SPB-GS servers 
 
 This is the knowledge base that will guide you through all the basics including main features, working with commands and HoE+ gameplay.
 
+!!! info "This documentation is in active development, so there will be more content in near future."
+
 Here is a quick overview of the SPB-GS Docs content:
 
 <div class="grid cards" markdown>

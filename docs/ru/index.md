@@ -2,26 +2,29 @@
 
 Welcome!
 
-If you've ended up here, most probably you've typed out `!help` command on SPB-GS servers or have chosen respective menu button when pressing `J`.
+If you're ended up here, most likely you're familiar enough with SPB-GS servers and made your way in here on purpose.
 
-Otherwise, you might want to know that there's a chat commander feature on SPB-GS servers that allow to modify certain settings.
+This is the knowledge base that will guide you through all the basics including main features, working with commands and HoE+ gameplay.
 
-A custom radial menu with commands is available through pressing `J` in game. It can be bound to a different hotkey with the following console command:
-
-`setbind J GBA_ShowVoteComms`
-
-Put whatever you want instead of `J` to bind the menu to a different hotkey.
+!!! info "This documentation is in active development, so there will be more content in near future."
 
 Here is a quick overview of the SPB-GS Docs content:
 
 <div class="grid cards" markdown>
 
 - :material-chat-alert-outline: __[Commands]__ – Figure out how chat commander works and what are the available commands
-- :material-account-group: __[Custom Spawn System]__ – Learn the details of custom spawn system
+- :material-account-multiple-check: __[Authority Levels]__ – Detailed info on access levels for all commands
+- :material-account-group: __[Management Basics]__ – Tips and tricks on server adjustments
+- :material-account-cog: __[Custom Spawn System]__ – Learn the details of custom spawn system
 - :material-crosshairs-question: __[AI Difficulty]__ – Custom zed difficulty presets explained
+- :material-baby-carriage: __[HoE+ Basics]__ – Precision gameplay at your fingertips
 
 </div>
 
   [Commands]: commands.md
+  [Authority Levels]: authoritylevels.md
+  [Management Basics]: managementbasics.md
   [Custom Spawn System]: customspawns.md
   [AI Difficulty]: aidifficulty.md
+  [Authority Levels]: authoritylevels.md
+  [HoE+ Basics]: hoeplus.md

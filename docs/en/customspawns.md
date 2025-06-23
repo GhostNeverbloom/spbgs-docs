@@ -76,4 +76,4 @@ How it works:
 
 Vanilla game has a feature where zeds can spawn through vents and sewers. Usually it's Clots, Crawlers and Stalkers. Most of the vanilla maps designed in such a way that they enagage players into kiting playstyle, making zeds spawn from almost every corner. In certain cases so-called `vent spawns` are responsible for this kind of spawn behaviour. It is possible to disable this type of spawn points which doesn't affect the flow of the map but greatly improves the quality of holdout-type of gampelay.
 
-[`!disableventspawns`](commands.md#disable-vent-spawns) or [`!dvs`](commands.md#disable-vent-spawns) set to `true` will disable this behaviour, making some holdout spots on maps much more viable for holding. It is set to `true` by default on all HoE+ servers.
+[`!disableventspawns`](commands.md#disable-vent-spawns) or [`!dvs`](commands.md#disable-vent-spawns) set to `true` will disable this behaviour, making some holdout spots on maps much more viable for holding. It is set to `true` by default on all HoE+ servers. 
