@@ -460,7 +460,7 @@ These commands won't work on those players who are logged in as server admins.
 
         * __`!dlzsc true`__
 
-	    * __`lockweaponpickup false`__
+	    * __`!lockweaponpickup false`__
 
     === "String/Enum"
 

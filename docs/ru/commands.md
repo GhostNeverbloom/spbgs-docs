@@ -459,7 +459,7 @@
 
         * __`!dlzsc true`__
 
-	    * __`lockweaponpickup false`__
+	    * __`!lockweaponpickup false`__
 
     === "Текстовое"
 
