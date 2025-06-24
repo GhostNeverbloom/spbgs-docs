@@ -8,7 +8,7 @@ A custom radial commands menu is available through pressing `J` in the game. Cur
 
 It has a selection of commands serving as a shortcut for those who don't want to remember or type the most used commands. Executing them through both the chat and the command selector has the same effent and is entirely equivalent.
 
-!!! info "Note that the behaviour of some commands is [different](authoritylevels.md#command-grouping) on Vanilla and HoE+, and so is the exact selection of commands in the menu."
+!!! info "Note that the behaviour of some commands is [different](authoritylevels.md#authority-levels) on Vanilla and HoE+, and so is the exact selection of commands in the menu."
 
 ## Console & Customization
 

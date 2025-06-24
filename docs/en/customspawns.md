@@ -1,6 +1,6 @@
 # Custom Spawns
 
-[](){ #special-squad-count-pct-def }[Special Squad Count Percentage](commands.md#special-squad-count-pct) (or Custom Spawn System) was designed in order to implement harder yet highly flexible difficulty system to create more challenging experience across all HoE+ servers. This is the former feature of HoE+ mode which makes the most difference in terms of difficulty.
+[](){ #special-squad-count-pct-def }[Special Squad Count Percentage](commands.md#special-squad-count-pct) (or Custom Spawn System) was designed in order to implement harder yet highly flexible difficulty system to create more challenging experience across all servers including HoE+. This is the former feature of HoE+ mode which makes the most difference in terms of difficulty.
 
 By default, servers #05.1, #06, #07 and #08 have custom spawn system enabled.
 
@@ -16,7 +16,9 @@ Basically custom spawns combine features of [vanilla spawn system](https://wiki.
 
 Main differences:
 
-* The base of the system is very much like vanilla, i.e. there are normal and special squads which are spawned in a certain way;
+* The base of the system is very much like vanilla, i.e. there are normal and special zed squads which are spawned in a certain way;
+
+* Normal squads mostly consist of Trash and Mediums, while special squads include most of the Larges and Mediums;
 
 * Unlike vanilla, the spawn cycle is built upon a certain ratio between normal and special squads which is defined by [`special squad count percentage`](commands.md#special-squad-count-pct);
 
@@ -36,13 +38,13 @@ The default values for HoE+ servers vary from `0.1` (10%) to `0.3` (30%) which I
 
 The values around `0.5`-`0.75` are suitable for challenging experience in a lobby where most of the players are familiar enough with precision/CD gameplay, while `1.0` will be even less forgivable.
 
-Examples:
+!!! example "Usage examples:"
 
-* `!sscp 0.15`
+    * `!sscp 0.15`
 
-* `!sscp 0.5`
+    * `!sscp 0.5`
 
-* `!sscp 1`
+    * `!sscp 1`
 
 Any value above `1` will make no difference, while `0` will set the value to the one set by default in the server configs depending on which server it's used on. Due to the tech limitations it's impossible to set the value to `0` manually, so the closest you can do without disabling the feature is to set it to `0.01`. Otherwise, [`!dcss`](commands.md#disable-custom-squad-spawns) will do the thing.
 
@@ -66,7 +68,7 @@ How it works:
 
 * Due to fundamental differences in spawn methods this one has more consistent flow of larges throughout the wave, yet can cause enough troubles for survivors to keep staying alive;
 
-* It is not recommended to use this feature especially with high `!sscp` values becaue it can create abnormal amount of larges which very few player teams can handle;
+* It is not recommended to use this feature with high `!sscp` values becaue it can create abnormal amount of larges which very few player teams can handle;
 
 * According to the practice, values around `0.05`-`0.1` together with `!sscp 0.3` already give a decent amount of larges, making this borderline useable in a normal match;
 

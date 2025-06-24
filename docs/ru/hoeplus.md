@@ -1,3 +1,3 @@
-# Hell on Earth+ Basics
+# Основы Hell on Earth+
 
-Hey, this section is incomplete. Sadge!
+Обана, а этот раздел пока не закончен. Жаль!

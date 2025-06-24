@@ -1,79 +1,85 @@
-# Custom Spawns
+# Кастомная система спавна
 
-[](){ #special-squad-count-pct-def }[Special Squad Count Percentage](commands.md#special-squad-count-pct) (or Custom Spawn System) was designed in order to implement harder yet highly flexible difficulty system to create more challenging experience across all HoE+ servers. This is the former feature of HoE+ mode which makes the most difference in terms of difficulty.
+[](){ #special-squad-count-pct-def }[Special Squad Count Percentage](commands.md#special-squad-count-pct) (или кастомная система спавна) была разработана в целях реализации усложнённой и в то же время гибкой системы для создания более интересного геймплея на всех серверах включая HoE+. Это основополагающая механика режима HoE+, которая даёт наибольший эффект в плане сложности игры.
 
-By default, servers #05.1, #06, #07 and #08 have custom spawn system enabled.
+По умолчанию на серверах #05.1, #06, #07 и #08 система кастомных спавнов активна.
 
-Related commands:
+Связанные команды:
 
-* [`!specialsquadcountpct`](commands.md#special-squad-count-pct) or [`!sscp`](commands.md#special-squad-count-pct)
+* [`!specialsquadcountpct`](commands.md#special-squad-count-pct) или [`!sscp`](commands.md#special-squad-count-pct)
 
-* [`!disablecustomsquadspawns`](commands.md#disable-custom-squad-spawns) or [`!dcss`](commands.md#disable-custom-squad-spawns)
+* [`!disablecustomsquadspawns`](commands.md#disable-custom-squad-spawns) или [`!dcss`](commands.md#disable-custom-squad-spawns)
 
-## How it works?
+## Как это работает?
 
-Basically custom spawns combine features of [vanilla spawn system](https://wiki.killingfloor2.com/index.php?title=ZED_Spawning) and [Controlled Difficulty](https://github.com/notblackout/kf2-controlled-difficulty/blob/master/spawn.md), taking advantages of both to create a unique yet familiar experience.
+По сути эта система совмещает в себе особенности [ванильной системы спавнов](https://wiki.killingfloor2.com/index.php?title=ZED_Spawning) и [Controlled Difficulty](https://github.com/notblackout/kf2-controlled-difficulty/blob/master/spawn.md), вбирая в себя преимущества обеих для создания уникального, но в то же время узнаваемого игрового опыта.
 
-Main differences:
+Основные особенности:
 
-* The base of the system is very much like vanilla, i.e. there are normal and special squads which are spawned in a certain way;
+* Основа системы очень схожа с ванильной игрой, т.е. присутствуют обычные и особые отряды зедов, которые спавнятся определённым образом;
 
-* Unlike vanilla, the spawn cycle is built upon a certain ratio between normal and special squads which is defined by [`special squad count percentage`](commands.md#special-squad-count-pct);
+* Обычные отряды по большей части состоят из треша[^1] и медиумов[^2], в то время как особые отряды включают в себе основную массу бигов[^3] и медиумов[^2];
 
-* Unlike CD, the order of squads within spawn cycle is random, which makes the difficulty curve less predictable but consistent enough for enjoyable experience;
+* В отличие от ваниллы, цикл спавна выстраивается на основе соотношения между обычными и особыми отрядами зедов, которое определяется параметром [`special squad count percentage`](commands.md#special-squad-count-pct);
 
-* Since special squads mostly consist of Larges and Mediums, adjusting the percentage of special squads controls the ratio between all types of zeds which defines the core difficulty of the game;
+* В отличие от CD, порядок отрядов внутри спавн цикла случайный, что делает кривую сложности менее предсказуемой, но достаточно однородной для интересного игрового опыта;
 
-* Each wave has its own pre-defined normal and special squads, meaning that each wave has essential limits to the zed type quantity;
+* Поскольку особые отряды по большей части состоят из бигов[^3], настройка процентажа особых отрядов контролирует соотношение между всеми типами зедов, что является определяющим элементом сложности игры;
 
-* By setting `!sscp` to the minimal value (0.01) it's possible to achieve the experience similar to vanilla (10% of Larges on wave 10), while the maximum value (1.0) will end up in ~29-30% of larges which is close to CD's `ts_mig_v3` spawn cycle.
+* Каждая волна имеет свой собственный набор обычных и особых отрядов, поэтому каждая волна имеет естественные лимиты качества и количества зедов;
 
-## How to use?
+* Установив `!sscp` на минимальное возможное значение (0.01) возможно достичь эффект схожий с ванильной игрой (10% бигов[^3] на 10-ой волне), в то время как максимальное значение (1.0) даст ~29-30% бигов[^3], что близко к спавн циклу `ts_mig_v3` из CD.
 
-Adjustments of custom spawns are done via [`!specialsquadcountpct`](commands.md#special-squad-count-pct) or [`!sscp`](commands.md#special-squad-count-pct) command.
+## Как её использовать?
 
-The default values for HoE+ servers vary from `0.1` (10%) to `0.3` (30%) which I found to be optimal values for balanced experience for each of the servers.
+Настройки кастомного спавна производятся командой [`!specialsquadcountpct`](commands.md#special-squad-count-pct) или [`!sscp`](commands.md#special-squad-count-pct).
 
-The values around `0.5`-`0.75` are suitable for challenging experience in a lobby where most of the players are familiar enough with precision/CD gameplay, while `1.0` will be even less forgivable.
+Стандартные значения для HoE+ серверов варьируются от `0.1` (10%) до `0.3` (30%), что на мой взгляд является оптимальными значениями для сбалансированного игрового опыта для каждого из серверов.
 
-Examples:
+Значения в районе `0.5`-`0.75` уже способны предоставить вызов для лобби в котором большая часть игроков так или иначе знакомы со стрелковым геймплеем по типу CD, в то время как `1.0` будет прощать ещё меньше ошибок.
 
-* `!sscp 0.15`
+!!! example "Пример использования:"
 
-* `!sscp 0.5`
+    * `!sscp 0.15`
 
-* `!sscp 1`
+    * `!sscp 0.5`
 
-Any value above `1` will make no difference, while `0` will set the value to the one set by default in the server configs depending on which server it's used on. Due to the tech limitations it's impossible to set the value to `0` manually, so the closest you can do without disabling the feature is to set it to `0.01`. Otherwise, [`!dcss`](commands.md#disable-custom-squad-spawns) will do the thing.
+    * `!sscp 1`
 
-[`disablecustomsquadspawns`](commands.md#disable-custom-squad-spawns), if set to `true`, disables the system entirely, making the spawn cycle purely vanilla.
+Любое значение выше `1` не даст никакого эффекта, в то время как `0` вернёт значение по умолчанию из серверных конфигов в зависимости от того на каком сервере была применена команда. Из-за технических ограничений значение нельзя поставить на `0` вручную, поэтому наиболее близкое что можно сделать -- это поставить значение на `0.01`. В противном случае команда [`!dcss`](commands.md#disable-custom-squad-spawns) сделает что нужно.
 
-## Extra features
+Если [`disablecustomsquadspawns`](commands.md#disable-custom-squad-spawns), стоит на `true`, то она полностью отключает систему, полностью возвращая ванильный спавн цикл.
 
-Apart from modified spawn cycle, there are other ways of affecting difficulty through spawns, [`large zed spawn chance`](commands.md#large-zed-spawn-chance) system for example. 
+## Дополнительные функции
 
-[](){ #large-zed-spawn-chance-def }[`Large zed spawn chance`](commands.md#large-zed-spawn-chance) is a system that allows to spawn Larges (Scrakes and Fleshpounds) by replacing random zeds upon their spawn.
+Помимо кастомного цикла спавна есть и другие способы влиять на сложность посредством спавнов, например с помощью шанса спавна бигов[^3] ([`large zed spawn chance`](commands.md#large-zed-spawn-chance)).
 
-How it works:
+[](){ #large-zed-spawn-chance-def }[`Large zed spawn chance`](commands.md#large-zed-spawn-chance) -- это система, позволяющая спавнить бигов[^3] (Мясников и Отбивальщиков) посредством подмены случайных зедов в момент их спавна.
 
-* Once enabled through [`!dlzsc`](commands.md#disable-large-zed-spawn-chance) set to `false`, replaces random Trash or Medium zeds with Larges with a 60:40 ratio (60% of Scrakes and 40% of Fleshpounds);
+Как это работает:
 
-* The chance is adjusted through [`!lzsc`](commands.md#large-zed-spawn-chance) command which takes up `float` value from `0` to `1`;
+* Когда [`!dlzsc`](commands.md#disable-large-zed-spawn-chance) стоит на `false`, подменяет случайный треш[^1] или медиумов[^2] бигами[^3] с соотношением 60:40 (60% of Мясников и 40% of Отбивальщиков);
 
-* The trigger rate for the chance is defined through server configs and is equal to 0.5 ticks per second (or 1 tick per 2 seconds) in a 6-player match;
+* Шанс настраивается командой [`!lzsc`](commands.md#large-zed-spawn-chance), которая в качестве значения принимает доли единицы (от `0` до `1`);
 
-* The system is disabled by default, because it was replaced by [Special Squad Count Percentage system](#special-squad-count-pct-def) eventually, however it's still usable and works additively on top of [SSCP](#special-squad-count-pct-def);
+* Частота срабатывания шанса задана на стороне серверных конфигов и равен 0.5 тикам в секунду (или 1 тик в 2 секунды) в матче из 6 игроков;
 
-* Due to fundamental differences in spawn methods this one has more consistent flow of larges throughout the wave, yet can cause enough troubles for survivors to keep staying alive;
+* По умолчанию система выключена, т.к. она впоследствии была заменена [кастомной системой спавнов](#special-squad-count-pct-def), однако она всё ещё пригодна к использованию и работает в дополнение к [SSCP](#special-squad-count-pct-def);
 
-* It is not recommended to use this feature especially with high `!sscp` values becaue it can create abnormal amount of larges which very few player teams can handle;
+* В связи с фундаментальными различиями метода спавна данная система имеет более размеренный поток ларджей[^3] по ходу волны, но всё ещё может доставить хлопоты игрокам в процессе выживания;
 
-* According to the practice, values around `0.05`-`0.1` together with `!sscp 0.3` already give a decent amount of larges, making this borderline useable in a normal match;
+* Не рекомендуется использовать эту опцию с высокими значениями `!sscp`, поскольку она может создать несоизмеримо большое количество бигов[^3], которое смогут осилить далеко не все игроки;
 
-* There's [Max Large Monsters](commands.md#disable-max-large-monsters) feature that can limit the concurrent amount of alive Larges on map that was meant to be used with [`!lzsc`](commands.md#large-zed-spawn-chance), but it ended up being scrapped as well.
+* По нашему опыту, значения в районе `0.05`-`0.1` в связке `!sscp 0.3` уже дают достаточное количество ларджей[^3], что уже погранично-играбельно в рамках обычного матча;
 
-## Vent Spawns
+* Также есть система [Max Large Monsters](commands.md#disable-max-large-monsters), позволяющая ограничивать количество живых бигов[^3] на карте, которая задумывалась для использования в связке с [`!lzsc`](commands.md#large-zed-spawn-chance), но также осталась пылиться на полке.
 
-Vanilla game has a feature where zeds can spawn through vents and sewers. Usually it's Clots, Crawlers or Stalkers. Most of the vanilla maps designed in such a way that they enagage players into kiting playstyle, making zeds spawn from almost every corner. In certain cases so-called "vent spawns" are responsible for this kind of spawn behaviour. It is possible to disable this type of spawn points which doesn't affect the flow of the map but greatly improves the quality of holdout-type of gampelay.
+## Vent-спавны
 
-[`!disableventspawns`](commands.md#disable-vent-spawns) or [`!dvs`](commands.md#disable-vent-spawns) set to `true` will disable this behaviour, making some holdout spots on maps much more viable for holding; set to `true` by default on all Precision/HoE+ servers.
+В ванильной игре есть механика спавна зедов из вентиляционных шахт и канализационных люков. Обычно это Клоты, Ползуны и Сталкеры. Большинство ванильных карт спроектированы таким образом, что они провоцируют игроков на передвижение по карте (кайтинг) за счёт того что зеды спавнятся из каждого угла. В некоторых случаях так называемые "вент спавны" ответственны за такое поведение спавна на карте. Однако можно отключить этот тип точек спавна зедов, что не влияет на интенсивность потока спавнящихся зедов на карте, но значительно улучшает комфорт игры при удержании определённых точек на карте (т.е. при holdout-стиле игры).
+
+[`!disableventspawns`](commands.md#disable-vent-spawns) или [`!dvs`](commands.md#disable-vent-spawns) со значением `true` отключает такое поведение, делая некоторые точки на картах пригодными для того чтобы там обороняться; стоит на `true` по умолчанию на всех Precision/HoE+ серверах.
+
+[^1]: Треш (Trash) составляют мелкие зеды -- Кисты, Клоты, Слэшеры, Ползуны и Сталкеры.
+[^2]: Медиумы (Mediums) -- это Сирены, Толстяки, Хаски и Берсеркеры.
+[^3]: Биги или ларджи (Larges) -- это Мясники и Отбивальщики.

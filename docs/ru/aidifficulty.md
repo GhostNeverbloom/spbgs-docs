@@ -1,40 +1,40 @@
-# AI Difficulty System
+# Система AI Difficulty
 
-## What is this?
+## Что это?
 
-This is the brand new system that allows to tweak settings related to zeds through server configs "on fly", and that way create various difficulty presets.
+Это новая система, которая позволяет настраивать различные параметры зедов через серверные конфигурации на лету, и таким образом создавать различные пресеты сложности.
 
-Its main difference from other solutions is that it doesn't natively modify zed pawns, but rather changes their parameters that can be quickly configured through a server-side `INI-file`.
+Основное различие с другими существующими решениями -- это то что система не изменяет классы зедов, а позволяет быстро настраивать их параметры и поведение через серверный `INI-файл`.
 
-Currently the system is limited to custom zed parameters, but in future it will be expanded with few other mechanics, such as different effects based on damage type, zonal hit system for players and stuff like that.
+На текущий момент система ограничена изменением параметров зедов, но в будущем она будет расширена другими механиками, такими как различные дебаффы основанные на типе получаемого урона, зональная система повреждений для игроков и т.д.
 
-Apart from that, it includes custom behaviour and stages of the bosses, generally making them harder.
+Кроме того, она включает в себя кастомное поведение и стадии боссов, в общем и целом делая их более опасными.
 
-All changes are organised into difficulty presets that can be switched back and forth during a match:
+Все правки распределены на пресеты сложности, которые можно переключать между собой во время матча:
 
-* [`!dcad`](commands.md#disable-custom-ai-difficulty) set to `false` enables the sytem, allowing to use custom zed presets;
+* [`!dcad`](commands.md#disable-custom-ai-difficulty) установленная на `false` включает систему, позволяя использовать систему пресетов;
 
-* [`!ad`](commands.md#ai-difficulty) `<index>` switches between difficulty presets.
+* [`!ad`](commands.md#ai-difficulty) `<index>` переключает пресеты сложности.
 
 [](){ #available-presets }
-## Available Presets
+## Доступные пресеты
 
-There are few presets of zeds defined by their index:
+Есть несколько пресетов для зедов, каждому из которых присвоен свой индекс:
 
-* `0` - Vanilla zeds;
+* `0` - Vanilla Zeds;
 
-* `1` - Pivo zeds;
+* `1` - Pivo Zeds;
 
-* `2` - Harder zeds by Kore;
+* `2` - Harder Zeds от Kore;
 
-* `3` - Nightcore zeds by fanta.
+* `3` - Nightcore Zeds от fanta.
 
-!!! note "Please note that all listed options are only available on Precision/HoE+ servers, while Vanilla has only `1` and `2`."
+!!! note "Нужно учесть что все перечисленные опции доступны только на Precision/HoE+ серверах, в то время как на ванильных серверах есть только `1` and `2`."
 
 [](){ #ai-difficulty-presets }
-## Zed Preset Definitions
+## Описание пресетов зедов
 
-=== "Cyst"
+=== "Киста"
 
     <div class="grid" markdown>
 
@@ -53,9 +53,9 @@ There are few presets of zeds defined by their index:
           Walk Speed      = 210 +
           Sprint Speed    = 420 +
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
     !!! harder-zeds "Harder Zeds"
           ``` ini
@@ -72,15 +72,15 @@ There are few presets of zeds defined by their index:
           Sprint Speed    = 420 +
           ```
 
-    1.  * Zeds don't fight with each other;
+    1.  * Зеды не атакуют целенаправленно друг друга;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Зеды не проигрывают анимацию торжества при убийстве игрока (на текущий момент забагована, поэтому отключена);
 
-        * Removed 10% movement speed randomization from Vanilla.
+        * Отключена 10% рандомизация скорости передвижения из ваниллы.
 
     </div>
 
-=== "Clot"
+=== "Клот"
 
     <div class="grid" markdown>
 
@@ -99,9 +99,9 @@ There are few presets of zeds defined by their index:
           Walk Speed      = 230 +
           Sprint Speed    = 520 +
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
     !!! harder-zeds "Harder Zeds"
           ``` ini
@@ -119,15 +119,17 @@ There are few presets of zeds defined by their index:
           Sprint Speed    = 520 +
           ```
 
-    1.  * Zeds don't fight with each other;
+    1.  * Зеды не атакуют целенаправленно друг друга;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Зеды не проигрывают анимацию торжества при убийстве игрока (на текущий момент забагована, поэтому отключена);
 
-        * Removed 10% movement speed randomization from Vanilla.
+        * Отключена 10% рандомизация скорости передвижения из ваниллы.
 
     </div>
 
-=== "Slasher"
+    !!! info "Мятежники полностью отключены во всех пресетах кроме ванильного."
+
+=== "Слэшер"
 
     <div class="grid" markdown>
 
@@ -146,9 +148,9 @@ There are few presets of zeds defined by their index:
           Walk Speed      = 320 +
           Sprint Speed    = 520 +
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
     !!! harder-zeds "Harder Zeds"
           ``` ini
@@ -166,15 +168,15 @@ There are few presets of zeds defined by their index:
           Sprint Speed    = 520 +
           ```
 
-    1.  * Zeds don't fight with each other;
+    1.  * Зеды не атакуют целенаправленно друг друга;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Зеды не проигрывают анимацию торжества при убийстве игрока (на текущий момент забагована, поэтому отключена);
 
-        * Removed 10% movement speed randomization from Vanilla.
+        * Отключена 10% рандомизация скорости передвижения из ваниллы.
 
     </div>
 
-=== "Crawler"
+=== "Ползун"
 
     <div class="grid" markdown>
 
@@ -193,9 +195,9 @@ There are few presets of zeds defined by their index:
           Walk Speed      = 420 +
           Sprint Speed    = 520 +
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
     !!! harder-zeds "Harder Zeds"
           ``` ini
@@ -213,17 +215,17 @@ There are few presets of zeds defined by their index:
           Sprint Speed    = 520 +
           ```
 
-    1.  * Zeds don't fight with each other;
+    1.  * Зеды не атакуют целенаправленно друг друга;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Зеды не проигрывают анимацию торжества при убийстве игрока (на текущий момент забагована, поэтому отключена);
 
-        * Removed 10% movement speed randomization from Vanilla.
+        * Отключена 10% рандомизация скорости передвижения из ваниллы.
 
     </div>
 
-    !!! info "Elite Crawlers are natively disabled on HoE+/Precision servers."
+    !!! info "Элитные пауки полностью отключены на всех Precision/HoE+ серверах."
 
-=== "Stalker"
+=== "Сталкер"
 
     <div class="grid" markdown>
 
@@ -242,9 +244,9 @@ There are few presets of zeds defined by their index:
           Walk Speed      = 420 +
           Sprint Speed    = 520 +
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
     !!! harder-zeds "Harder Zeds"
           ``` ini
@@ -262,15 +264,15 @@ There are few presets of zeds defined by their index:
           Sprint Speed    = 520 +
           ```
 
-    1.  * Zeds don't fight with each other;
+    1.  * Зеды не атакуют целенаправленно друг друга;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Зеды не проигрывают анимацию торжества при убийстве игрока (на текущий момент забагована, поэтому отключена);
 
-        * Removed 10% movement speed randomization from Vanilla.
+        * Отключена 10% рандомизация скорости передвижения из ваниллы.
 
     </div>
 
-=== "Gorefast"
+=== "Берсерк"
 
     <div class="grid" markdown>
 
@@ -286,11 +288,11 @@ There are few presets of zeds defined by their index:
           Bleedout Time         = 5s   (2)
           Gorefiend Chance      = 45%  (3)
           ```
-    1.  Threshold (in meters) between zed and player after which it can start sprinting towards the player.
+    1.  Расстояние (в метрах) между зедом и игроком, по преодолении которого зед может начать бежать на игрока.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Chance for Gorefast to spawn as Gorefiend, which is technically the 'elite' version of Gorefast.
+    3.  Шанс того что Берсеркер заспавнится как Берсерк с 2 мечами, который технически является его 'элитной' версией.
 
     !!! pivo-zeds annotate "Pivo Zeds (1)"
           ``` ini
@@ -304,15 +306,15 @@ There are few presets of zeds defined by their index:
           Bleedout Time         = 3s -  (3)
           Gorefiend Chance      = 45%   (4)
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
-    2.  Threshold (in meters) between zed and player after which it can start sprinting towards the player.
+    2.  Расстояние (в метрах) между зедом и игроком, по преодолении которого зед может начать бежать на игрока.
 
-    3.  Time until zed's body drops dead after decapitating.
+    3.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    4.  Chance for Gorefast to spawn as Gorefiend, which is technically the 'elite' version of Gorefast.
+    4.  Шанс того что Берсеркер заспавнится как Берсерк с 2 мечами, который технически является его 'элитной' версией.
 
     !!! harder-zeds annotate "Harder Zeds"
           ``` ini
@@ -327,11 +329,11 @@ There are few presets of zeds defined by their index:
           Gorefiend Chance      = N/A   (3)
           ```
 
-    1.  Threshold (in meters) between zed and player after which it can start sprinting towards the player.
+    1.  Расстояние (в метрах) между зедом и игроком, по преодолении которого зед может начать бежать на игрока.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Chance for Gorefast to spawn as Gorefiend, which is technically the 'elite' version of Gorefast.
+    3.  Шанс того что Берсеркер заспавнится как Берсерк с 2 мечами, который технически является его 'элитной' версией.
 
     !!! nightcore-zeds annotate "Nightcore Zeds (1)"
           ``` ini
@@ -346,21 +348,21 @@ There are few presets of zeds defined by their index:
           Gorefiend Chance      = N/A   (4)
           ```
 
-    1.  * Zeds don't fight with each other;
+    1.  * Зеды не атакуют целенаправленно друг друга;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Зеды не проигрывают анимацию торжества при убийстве игрока (на текущий момент забагована, поэтому отключена);
 
-        * Removed 10% movement speed randomization from Vanilla.
+        * Отключена 10% рандомизация скорости передвижения из ваниллы.
 
-    2.  Threshold (in meters) between zed and player after which it can start sprinting towards the player.
+    2.  Расстояние (в метрах) между зедом и игроком, по преодолении которого зед может начать бежать на игрока.
 
-    3.  Time until zed's body drops dead after decapitating.
+    3.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    4.  Elite Pawn chance is forced to be disabled, so this setting is not used.
+    4.  Шанс спавна в качестве элитной версии принудительно отключен, поэтому настройка не задействована.
 
     </div>
 
-=== "Gorefiend"
+=== "Берсерк (2 меча)"
 
     <div class="grid" markdown>
 
@@ -376,9 +378,9 @@ There are few presets of zeds defined by their index:
           Bleedout Time         = 5s  (2)
           ```
 
-    1.  Threshold (in meters) between zed and player after which it can start sprinting towards the player.
+    1.  Расстояние (в метрах) между зедом и игроком, по преодолении которого зед может начать бежать на игрока.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
     !!! pivo-zeds annotate "Pivo Zeds (1)"
           ``` ini
@@ -391,19 +393,19 @@ There are few presets of zeds defined by their index:
           Sprint Trigger Range  = 14m + (2)
           Bleedout Time         = 3s -  (3)
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
-    2.  Threshold (in meters) between zed and player after which it can start sprinting towards the player.
+    2.  Расстояние (в метрах) между зедом и игроком, по преодолении которого зед может начать бежать на игрока.
 
-    3.  Time until zed's body drops dead after decapitating.
+    3.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
     </div>
 
-    !!! info "Gorefiends are natively disabled in Harder and Nightcore presets."
+    !!! info "Берсерки с 2 мечами полностью отключены в пресетах Harder и Nightcore."
 
-=== "Bloat"
+=== "Толстяк"
 
     <div class="grid" markdown>
 
@@ -415,9 +417,9 @@ There are few presets of zeds defined by their index:
           Bleedout Time         = 5s    (1)
           DMG Taken by Fire     = 1x    (2)
           ```
-    1.  Time until zed's body drops dead after decapitating.
+    1.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    2.  Vulnerability multiplier against Fire damage type.
+    2.  Множитель уязвимости против типа урона 'Огонь'.
 
     !!! pivo-zeds annotate "Pivo Zeds (1)"
           ``` ini
@@ -427,13 +429,13 @@ There are few presets of zeds defined by their index:
           Bleedout Time         = 3s -   (2)
           DMG Taken by Fire     = 0.4x - (3)
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Vulnerability multiplier against Fire damage type.
+    3.  Множитель уязвимости против типа урона 'Огонь'.
 
     !!! harder-zeds annotate "Harder Zeds"
           ``` ini
@@ -443,9 +445,9 @@ There are few presets of zeds defined by their index:
           Bleedout Time         = 3s -  (1)
           DMG Taken by Fire     = 1x    (2)
           ```
-    1.  Time until zed's body drops dead after decapitating.
+    1.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    2.  Vulnerability multiplier against Fire damage type.
+    2.  Множитель уязвимости против типа урона 'Огонь'.
 
     !!! nightcore-zeds annotate "Nightcore Zeds (1)"
           ``` ini
@@ -456,19 +458,19 @@ There are few presets of zeds defined by their index:
           DMG Taken by Fire     = 0.4x - (3)
           ```
 
-    1.  * Zeds don't fight with each other;
+    1.  * Зеды не атакуют целенаправленно друг друга;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Зеды не проигрывают анимацию торжества при убийстве игрока (на текущий момент забагована, поэтому отключена);
 
-        * Removed 10% movement speed randomization from Vanilla.
+        * Отключена 10% рандомизация скорости передвижения из ваниллы.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Vulnerability multiplier against Fire damage type.
+    3.  Множитель уязвимости против типа урона 'Огонь'.
 
     </div>
 
-=== "Husk"
+=== "Хаск"
 
     <div class="grid" markdown>
 
@@ -496,15 +498,15 @@ There are few presets of zeds defined by their index:
           Fireball Animation Rate          = 1x      (4)
           ```
 
-    1.  Time until zed's body drops dead after decapitating.
+    1.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    2.  Cooldown between fireball attacks.
+    2.  Задержка между выстрелами фаерболлом.
 
-    3.  Random value from `-value` to `+value` that's added to `Fireball Fire Interval`;
+    3.  Случайное значение от `-X` до `+X`, которое прибавляется к `Fireball Fire Interval`;
 
-        If set to `1`, a random value from `-1` to `1` will be added to the cooldown between fireball attacks.
+        Если стоит на `1`, к задержке между выстрелами фаерболлом прибавляется случайное значение от `-1` до `1`.
 
-    4.  Rate of the Husk's fireball attack animation.
+    4.  Скорость анимации выстрела Хаска.
 
     !!! pivo-zeds annotate "Pivo Zeds (1)"
           ``` ini
@@ -529,19 +531,19 @@ There are few presets of zeds defined by their index:
           Flamethrower Max Distance        = 500
           Fireball Animation Rate          = 1x      (5)
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Cooldown between fireball attacks.
+    3.  Задержка между выстрелами фаерболлом.
 
-    4.  Random value from `-value` to `+value` that's added to `Fireball Fire Interval`;
+    4.  Случайное значение от `-X` до `+X`, которое прибавляется к `Fireball Fire Interval`;
 
-        If set to `1`, a random value from `-1` to `1` will be added to the cooldown between fireball attacks.
+        Если стоит на `1`, к задержке между выстрелами фаерболлом прибавляется случайное значение от `-1` до `1`.
 
-    5.  Rate of the Husk's fireball attack animation.
+    5.  Скорость анимации выстрела Хаска.
 
     !!! harder-zeds annotate "Harder Zeds"
           ``` ini
@@ -567,15 +569,15 @@ There are few presets of zeds defined by their index:
           Fireball Animation Rate          = 1x      (4)
           ```
 
-    1.  Time until zed's body drops dead after decapitating.
+    1.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    2.  Cooldown between fireball attacks.
+    2.  Задержка между выстрелами фаерболлом.
 
-    3.  Random value from `-value` to `+value` that's added to `Fireball Fire Interval`;
+    3.  Случайное значение от `-X` до `+X`, которое прибавляется к `Fireball Fire Interval`;
 
-        If set to `1`, a random value from `-1` to `1` will be added to the cooldown between fireball attacks.
+        Если стоит на `1`, к задержке между выстрелами фаерболлом прибавляется случайное значение от `-1` до `1`.
 
-    4.  Rate of the Husk's fireball attack animation.
+    4.  Скорость анимации выстрела Хаска.
 
     !!! nightcore-zeds annotate "Nightcore Zeds (1)"
           ``` ini
@@ -601,30 +603,30 @@ There are few presets of zeds defined by their index:
           Fireball Animation Rate          = 1.15x + (5)
           ```
 
-    1.  * Zeds don't fight with each other;
+    1.  * Зеды не атакуют целенаправленно друг друга;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Зеды не проигрывают анимацию торжества при убийстве игрока (на текущий момент забагована, поэтому отключена);
 
-        * Removed 10% movement speed randomization from Vanilla.
+        * Отключена 10% рандомизация скорости передвижения из ваниллы.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Cooldown between fireball attacks.
+    3.  Задержка между выстрелами фаерболлом.
 
-    4.  Random value from `-value` to `+value` that's added to `Fireball Fire Interval`;
+    4.  Случайное значение от `-X` до `+X`, которое прибавляется к `Fireball Fire Interval`;
 
-        If set to `1`, a random value from `-1` to `1` will be added to the cooldown between fireball attacks.
+        Если стоит на `1`, к задержке между выстрелами фаерболлом прибавляется случайное значение от `-1` до `1`.
 
-    5.  Rate of the Husk's fireball attack animation.
+    5.  Скорость анимации выстрела Хаска.
 
     </div>
 
     !!! info "Note"
-        There is another parameter in Harder and Nightcore zeds called __`Low Intensity Attack Scale of Fireball Interval`__, however it is not used because [Game Conductor](https://wiki.killingfloor2.com/index.php?title=Mechanics_(Killing_Floor_2)#Gameplay_-_Game_Conductor) is disabled on both HoE+ and CD, therefore this parameter is obsolete.
+        Есть ещё один параметр в Harder- и Nightcore-зедах который называется __`Low Intensity Attack Scale of Fireball Interval`__, однако он не используется, потому что механика [Game Conductor'а](https://wiki.killingfloor2.com/index.php?title=Mechanics_(Killing_Floor_2)#Gameplay_-_Game_Conductor) отключена на HoE+ и CD, соответственно параметр неактуален.
 
-        Same with the Elite Pawns (EDARs) which are natively disabled on HoE+/Precision servers.
+        То же самое с элитными версиями (EDAR'ами), которые полностью отключены на HoE+/Precision серверах.
 
-=== "Siren"
+=== "Сирена"
 
     <div class="grid" markdown>
 
@@ -643,9 +645,9 @@ There are few presets of zeds defined by their index:
           Camera Shake Inner Radius    = 450
           Camera Shake Outer Radius    = 700
           ```
-    1.  Time until zed's body drops dead after decapitating.
+    1.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    2.  Chance for the zed to start sprinting after getting hit.
+    2.  Шанс того, что зед начнёт бежать при получении урона.
 
     !!! pivo-zeds annotate "Pivo Zeds (1)"
           ``` ini
@@ -662,13 +664,13 @@ There are few presets of zeds defined by their index:
           Camera Shake Inner Radius    = 600 +
           Camera Shake Outer Radius    = 1000 +
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Chance for the zed to start sprinting after getting hit.
+    3.  Шанс того, что зед начнёт бежать при получении урона.
 
     !!! harder-zeds annotate "Harder Zeds"
           ``` ini
@@ -686,9 +688,9 @@ There are few presets of zeds defined by their index:
           Camera Shake Outer Radius    = 1000 +
           ```
 
-    1.  Time until zed's body drops dead after decapitating.
+    1.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    2.  Chance for the zed to start sprinting after getting hit.
+    2.  Шанс того, что зед начнёт бежать при получении урона.
 
     !!! nightcore-zeds annotate "Nightcore Zeds (1)"
           ``` ini
@@ -706,21 +708,21 @@ There are few presets of zeds defined by their index:
           Camera Shake Outer Radius    = 1000 +
           ```
 
-    1.  * Zeds don't fight with each other;
+    1.  * Зеды не атакуют целенаправленно друг друга;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Зеды не проигрывают анимацию торжества при убийстве игрока (на текущий момент забагована, поэтому отключена);
 
-        * Removed 10% movement speed randomization from Vanilla.
+        * Отключена 10% рандомизация скорости передвижения из ваниллы.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Chance for the zed to start sprinting after getting hit.
+    3.  Шанс того, что зед начнёт бежать при получении урона.
 
     </div>
 
-    !!! info "The __`Solo Damage Modifier`__ parameter was not changed as a cost of pub-friendly experience; the feature is mostly relevant in a solo match which is often the case for [CD CP](https://steamcommunity.com/sharedfiles/filedetails/?id=2052571175)'s solomode feature, but isn't for HoE+ servers."
+    !!! info "Параметр __`Solo Damage Modifier`__ не был затронут в качестве компромисса для публичных серверов; опция по большей части актуальна в соло-матчах, которые чаще происходят при использовании режима SoloMode из [CD CP](https://steamcommunity.com/sharedfiles/filedetails/?id=2052571175), но на HoE+ это не так актуально."
 
-=== "Scrake"
+=== "Мясник"
 
     <div class="grid" markdown>
 
@@ -734,11 +736,11 @@ There are few presets of zeds defined by their index:
           Chainsaw Slow     = {--0%--}     (2)
           ```
 
-    1.  Time until zed's body drops dead after decapitating.
+    1.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    2.  Getting hit by Scrake's chainsaw reduces player's movement speed by specified value for `2s`.
+    2.  Получение урона от Мясника замедляет передвижение игрока на указанное значение в течение `2с`.
 
-        !!! warning "This feature is unfinished and so is currently not active."
+        !!! warning "Эта механика не завершена, поэтому на текущий момент не активна."
 
     !!! pivo-zeds annotate "Pivo Zeds (1)"
           ``` ini
@@ -749,15 +751,15 @@ There are few presets of zeds defined by their index:
           Bleedout Time     = 2s +   (2)
           Chainsaw Slow     = {--0%--}     (3)
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Getting hit by Scrake's chainsaw reduces player's movement speed by specified value for `2s`.
+    3.  Получение урона от Мясника замедляет передвижение игрока на указанное значение в течение `2с`.
 
-        !!! warning "This feature is unfinished and so is currently not active."
+        !!! warning "Эта механика не завершена, поэтому на текущий момент не активна."
 
     !!! harder-zeds annotate "Harder Zeds"
           ``` ini
@@ -768,11 +770,11 @@ There are few presets of zeds defined by their index:
           Bleedout Time     = 2s     (1)
           Chainsaw Slow     = {--0%--}     (2)
           ```
-    1.  Time until zed's body drops dead after decapitating.
+    1.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    2.  Getting hit by Scrake's chainsaw reduces player's movement speed by specified value for `2s`.
+    2.  Получение урона от Мясника замедляет передвижение игрока на указанное значение в течение `2с`.
 
-        !!! warning "This feature is unfinished and so is currently not active."
+        !!! warning "Эта механика не завершена, поэтому на текущий момент не активна."
 
     !!! nightcore-zeds annotate "Nightcore Zeds (1)"
           ``` ini
@@ -784,21 +786,21 @@ There are few presets of zeds defined by their index:
           Chainsaw Slow     = {--20% +--}  (3)
           ```
 
-    1.  * Zeds don't fight with each other;
+    1.  * Зеды не атакуют целенаправленно друг друга;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Зеды не проигрывают анимацию торжества при убийстве игрока (на текущий момент забагована, поэтому отключена);
 
-        * Removed 10% movement speed randomization from Vanilla.
+        * Отключена 10% рандомизация скорости передвижения из ваниллы.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Getting hit by Scrake's chainsaw reduces player's movement speed by specified value for `2s`.
+    3.  Получение урона от Мясника замедляет передвижение игрока на указанное значение в течение `2с`.
 
-        !!! warning "This feature is unfinished and so is currently not active."
+        !!! warning "Эта механика не завершена, поэтому на текущий момент не активна."
 
     </div>
 
-=== "Fleshpound"
+=== "Отбивальщик"
 
     <div class="grid" markdown>
 
@@ -816,9 +818,9 @@ There are few presets of zeds defined by their index:
           Rage Animation Rate          = 1x
           ```
 
-    1.  Time until zed's body drops dead after decapitating.
+    1.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    2.  Once Fleshpound makes visual contact with a player, it automatically enrages after Frustration Rage timer runs out.
+    2.  Как только Отбивальщик устанавливает визуальный контакт с игроком, он автоматически приходит в ярость по окончании таймера.
 
     !!! pivo-zeds annotate "Pivo Zeds (1)"
           ``` ini
@@ -833,13 +835,13 @@ There are few presets of zeds defined by their index:
           Footstep Cam Outer Radius    = 900
           Rage Animation Rate          = 1x
           ```
-    1.  * Removed 10% movement speed randomization from Vanilla;
+    1.  * Отключена 10% рандомизация скорости передвижения из ваниллы;
 
-        * Albino skins applied to Stalker, Bloat, Husk, Siren, Scrake and Fleshpound.
+        * Скины альбиносов применены к Сталкеру, Толстяку, Хаску, Сирене, Мяснику и Отбивальщику.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Once Fleshpound makes visual contact with a player, it automatically enrages after Frustration Rage timer runs out.
+    3.  Как только Отбивальщик устанавливает визуальный контакт с игроком, он автоматически приходит в ярость по окончании таймера.
 
     !!! harder-zeds annotate "Harder Zeds"
           ``` ini
@@ -855,9 +857,9 @@ There are few presets of zeds defined by their index:
           Rage Animation Rate          = 1x
           ```
 
-    1.  Time until zed's body drops dead after decapitating.
+    1.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    2.  Once Fleshpound makes visual contact with a player, it automatically enrages after Frustration Rage timer runs out.
+    2.  Как только Отбивальщик устанавливает визуальный контакт с игроком, он автоматически приходит в ярость по окончании таймера.
 
     !!! nightcore-zeds annotate "Nightcore Zeds (1)"
           ``` ini
@@ -873,16 +875,16 @@ There are few presets of zeds defined by their index:
           Rage Animation Rate          = 1.15x +
           ```
 
-    1.  * Zeds don't fight with each other;
+    1.  * Зеды не атакуют целенаправленно друг друга;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Зеды не проигрывают анимацию торжества при убийстве игрока (на текущий момент забагована, поэтому отключена);
 
-        * Removed 10% movement speed randomization from Vanilla.
+        * Отключена 10% рандомизация скорости передвижения из ваниллы.
 
-    2.  Time until zed's body drops dead after decapitating.
+    2.  Время по истечении которого тело зеда падает на землю после обезглавливания.
 
-    3.  Once Fleshpound makes visual contact with a player, it automatically enrages after Frustration Rage timer runs out.
+    3.  Как только Отбивальщик устанавливает визуальный контакт с игроком, он автоматически приходит в ярость по окончании таймера.
 
     </div>
 
-    !!! info "Quarter Pounds are natively disabled on HoE+/Precision servers."
+    !!! info "Мини-отбивальщики полностью отключены на Precision/HoE+ серверах."

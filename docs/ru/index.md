@@ -1,30 +1,27 @@
-# Basic info
+# Базовая информция
 
-Welcome!
+Если вы оказались здесь, то скорее всего достаточно знакомы с серверами SPB-GS и попали сюда целенаправленно.
 
-If you're ended up here, most likely you're familiar enough with SPB-GS servers and made your way in here on purpose.
+Это -- база знаний, которая проведёт вас через все основы, включая основные особенности, работу с командами и игровой процесс режима "Ад+" (Hell on Earth+).
 
-This is the knowledge base that will guide you through all the basics including main features, working with commands and HoE+ gameplay.
+!!! info "Эта документация находится в процессе активной проработки и дополнения, поэтому стоит ожидать дополнение контента и русскую локализацию, которая на текущий момент не завершена."
 
-!!! info "This documentation is in active development, so there will be more content in near future."
-
-Here is a quick overview of the SPB-GS Docs content:
+Краткое содержание документации:
 
 <div class="grid cards" markdown>
 
-- :material-chat-alert-outline: __[Commands]__ – Figure out how chat commander works and what are the available commands
-- :material-account-multiple-check: __[Authority Levels]__ – Detailed info on access levels for all commands
-- :material-account-group: __[Management Basics]__ – Tips and tricks on server adjustments
-- :material-account-cog: __[Custom Spawn System]__ – Learn the details of custom spawn system
-- :material-crosshairs-question: __[AI Difficulty]__ – Custom zed difficulty presets explained
-- :material-baby-carriage: __[HoE+ Basics]__ – Precision gameplay at your fingertips
+- :material-chat-alert-outline: __[Чат-команды]__ – Узнайте как работает чат-коммандер и какие есть команды
+- :material-account-multiple-check: __[Система ролей авторизации]__ – Детальная информация об уровнях авторизации для чат-команд
+- :material-account-group: __[Основы менеджмента]__ – Гайд по менеджменту для самых маленьких
+- :material-account-cog: __[Кастомная система спавна]__ – Узнайте подробности о системе спавна зедов
+- :material-crosshairs-question: __[Система AI Difficulty]__ – Объяснение принципа работы пресетов сложности
+- :material-baby-carriage: __[Основы HoE+]__ – Стрелковый геймплей на кончиках пальцев
 
 </div>
 
-  [Commands]: commands.md
-  [Authority Levels]: authoritylevels.md
-  [Management Basics]: managementbasics.md
-  [Custom Spawn System]: customspawns.md
-  [AI Difficulty]: aidifficulty.md
-  [Authority Levels]: authoritylevels.md
-  [HoE+ Basics]: hoeplus.md
+  [Чат-команды]: commands.md
+  [Система ролей авторизации]: authoritylevels.md
+  [Основы менеджмента]: managementbasics.md
+  [Кастомная система спавнов]: customspawns.md
+  [Система AI Difficulty]: aidifficulty.md
+  [Основы HoE+]: hoeplus.md

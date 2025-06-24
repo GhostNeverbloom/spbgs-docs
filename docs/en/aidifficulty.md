@@ -4,7 +4,7 @@
 
 This is the brand new system that allows to tweak settings related to zeds through server configs "on fly", and that way create various difficulty presets.
 
-Its main difference from other solutions is that it doesn't natively modify zed pawns, but rather changes their parameters that can be quickly configured through a server-side `INI-file`.
+Its main difference from other solutions is that it doesn't natively modify zed pawns, but rather allows to quickly configure their parameters through a server-side `INI-file`.
 
 Currently the system is limited to custom zed parameters, but in future it will be expanded with few other mechanics, such as different effects based on damage type, zonal hit system for players and stuff like that.
 
@@ -21,18 +21,18 @@ All changes are organised into difficulty presets that can be switched back and 
 
 There are few presets of zeds defined by their index:
 
-* `0` - Vanilla zeds;
+* `0` - Vanilla Zeds;
 
-* `1` - Pivo zeds;
+* `1` - Pivo Zeds;
 
-* `2` - Harder zeds by Kore;
+* `2` - Harder Zeds by Kore;
 
-* `3` - Nightcore zeds by fanta.
+* `3` - Nightcore Zeds by fanta.
 
 !!! note "Please note that all listed options are only available on Precision/HoE+ servers, while Vanilla has only `1` and `2`."
 
 [](){ #ai-difficulty-presets }
-## Zed Preset Definitions
+## Zed Preset Description
 
 === "Cyst"
 
@@ -126,6 +126,8 @@ There are few presets of zeds defined by their index:
         * Removed 10% movement speed randomization from Vanilla.
 
     </div>
+
+    !!! info "Rioters are disabled in all custom presets and only remain in Vanilla zeds."
 
 === "Slasher"
 
@@ -718,7 +720,7 @@ There are few presets of zeds defined by their index:
 
     </div>
 
-    !!! info "The __`Solo Damage Modifier`__ parameter was not changed as a cost of pub-friendly experience; the feature is mostly relevant in a solo match which is often the case for [CD CP](https://steamcommunity.com/sharedfiles/filedetails/?id=2052571175)'s solomode feature, but isn't for HoE+ servers."
+    !!! info "The __`Solo Damage Modifier`__ parameter was not changed as a cost of pub-friendly experience; the feature is mostly relevant in a solo match which is often the case for [CD CP](https://steamcommunity.com/sharedfiles/filedetails/?id=2052571175)'s SoloMode feature, but isn't for HoE+ servers."
 
 === "Scrake"
 

@@ -8,7 +8,7 @@ A custom radial commands menu is available through pressing `J` in the game. Cur
 
 It has a selection of commands serving as a shortcut for those who don't want to remember or type the most used commands. Executing them through both the chat and the command selector has the same effent and is entirely equivalent.
 
-!!! info "Note that the behaviour of some commands is [different](authoritylevels.md#command-grouping) on Vanilla and HoE+, and so is the exact selection of commands in the menu."
+!!! info "Note that the behaviour of some commands is [different](authoritylevels.md#authority-levels) on Vanilla and HoE+, and so is the exact selection of commands in the menu."
 
 ## Console & Customization
 
@@ -92,3 +92,12 @@ If not enabled by default, it can be switched on by setting [`!dcad`](commands.m
 * Changing this setting makes the huge difference in terms of difficulty, so please be mindful of that whenever and with whoever you play.
 
 * It is not recommended to play anything beyond [`Pivo`](aidifficulty.md#ai-difficulty-presets) if there's no proper lobby for it, especially if there's less than 6 players, because that's one way to end up wiped out relentlessly. Note my words.
+
+### Zed Quantity Adjustments
+
+Another way of tweaking the difficulty is to change the [wave size](commands.md#wave-size).
+
+!!! note "Note"
+    Do not crank up this setting to the extreme values! It can make the game unplayable if ammo count and the amount of zeds won't match.
+
+	If you happen to change it, at least do it together with [ammo multiplier](commands.md#ammo-multiplier).

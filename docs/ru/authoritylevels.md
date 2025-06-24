@@ -1,70 +1,71 @@
-# Authority Levels
+# Система ролей авторизации
 
-## Basics
+## Основы
 
-All chat commands work under the authority level system. This is how it works:
+Все чат-команды работают согласно системе уровней доступа. Работает это так:
 
-* All commands have certain level of authority needed for them to be executed;
+* Все команды имеют определённый уровень доступа, который необходим для их выполнения;
 
-* Overall there's 4 authority levels: `Player`, `Helper`, `Moderator` and `Admin`;
+* Всего есть 4 уровня доступа: `Игрок`, `Помощник`, `Модератор` и `Админ`;
 
-* Each next level (or role) includes the authority rights of the previous role, making the `Moderator` above `Helper` and `Admin` above both of them;
+* Каждый последующий уровень (роль) включает в себя полномочия предыдущей роли, таким образом `Модератор` находится выше `Помощника`, а `Админ` стоит выше обоих;
 
-* Certain commands, if executed by a role lower than required, will instead start a vote for applying that command;
+* Некоторые команды, введённые ролью ниже чем необходимой, начнут голосование за их применение;
 
-* The authority level requirements for each command can be different depending on which server they're used on;
+* Требование уровня доступа у каждой команды может отличаться в зависимости от сервера на котором они задействованы;
 
-* More detailed info on command groups you can find [below](#command-grouping).
+* More detailed info on command groups you can find [below](#authority-levels).
+* Более детальная информация 
 
-[](){ #command-grouping }
-## Command grouping
+[](){ #authority-levels }
+## Уровни доступа
 
-For safety reasons the accessibility of certain commands is different across the servers. Here's the actual list of commands and their properties:
+Для спокойствия доступность определённых команд разная в зависимости от сервера. Здесь представлен релевантный список команд с соответствующими полномочиями:
 
-| Command | Min. Authority (Vanilla) | Min. Authority (HoE+) | Votable (Vanilla) | Votable (HoE+) |
+| Команда | Мин. уровень (ванилла) | Мин. уровень (HoE+) | Голосуемая (ванилла) | Голосуемая (HoE+) |
 | --- | --- | --- | --- | --- |
-| [!info](commands.md#info) | Player | Player | - | - |
-| [!ms](commands.md#my-stats) | Player | Player | - | - |
-| [!stats](commands.md#stats) | Player | Player | - | - |
-| [!sr](commands.md#switch-role) | Player, Admin | Player, Admin | - | - |
-| [!lwp](commands.md#lock-weapon-pickup) | Player | Player | - | - |
-| [!lowp](commands.md#lock-other-weapon-pickup) | Player | Player | - | - |
-| [!swpm](commands.md#show-weapon-pickup-messages) | Player | Player | - | - |
-| [!wpat](commands.md#weapon-pickup-ammo-threshold) | Player | Player | - | - |
-| [!dit](commands.md#disable-item-drop)  | Player | Player | - | - |
-| [!pt](commands.md#pause-trader) | Helper | Helper | `True` | `True` |
-| [!upt](commands.md#unpause-trader) | Helper | Helper | `True` | `True` |
-| [!st](commands.md#skip-trader) | Helper | Helper | `False` | `False` |
-| [!kz](commands.md#kill-zeds) | Helper | Helper | `True` | `True` |
-| [!nm](commands.md#next-map) | Helper | Helper | `True` | `True` |
-| [!scw](commands.md#set-current-wave) | Moderator | Moderator | `False` | `False` |
-| [!ew](commands.md#end-wave) | Moderator | Moderator | `False` | `True` |
-| [!nw](commands.md#next-wave) | Moderator | Moderator | `False` | `False` |
-| [!mv](commands.md#map-vote) | Moderator | Moderator | `True` | `True` |
-| [!spw](commands.md#set-password) | Helper | Helper | `False` | `False` |
-| [!mm](commands.md#max-monsters) | Helper | Helper | `True` | `True` |
-| [!ws](commands.md#wave-size) | Moderator | Moderator | `False` | `False` |
-| [!dcws](commands.md#disable-custom-wave-size) | Moderator | Moderator | `False` | `False` |
-| [!wsf](commands.md#wave-size-fakes) | Moderator | Moderator | `False` | `False` |
-| [!dwsf](commands.md#disable-wave-size-fakes) | Moderator | Moderator | `False` | `False` |
-| [!wsm](commands.md#wave-size-multiplier) | Helper | Helper | `True` | `True` |
-| [!cs](commands.md#cohort-size) | Helper | Helper | `False` | `True` |
-| [!dk](commands.md#dosh-kill) | Helper | Helper | `False` | `False` |
-| [!am](commands.md#ammo-multiplier) | Helper | Helper | `True` | `True` |
-| [!sscp](commands.md#special-squad-count-pct) | Moderator | Helper | `False` | `True` |
-| [!dcss](commands.md#disable-custom-squad-spawns) | Moderator | Moderator | `False` | `False` |
-| [!lzsc](commands.md#large-zed-spawn-chance) | Moderator | Moderator | `False` | `True` |
-| [!dlzsc](commands.md#disable-large-zed-spawn-chance) | Moderator | Moderator | `False` | `True` |
-| [!dvs](commands.md#disable-vent-spawns) | Helper | Helper | `True` | `True` |
-| [!dmlm](commands.md#disable-max-large-monsters) | Moderator | Moderator | `False` | `False` |
-| [!ad](commands.md#ai-difficulty) | Moderator | Helper | `True` | `True` |
-| [!dcad](commands.md#disable-custom-ai-difficulty) | Moderator | Helper | `True` | `True` |
-| [!pl](commands.md#player-list) | Player | Player | - | - |
-| [!kill](commands.md#kill) | Moderator | Moderator | `False` | `False` |
-| [!kick](commands.md#kick) | Helper | Helper | `True` | `True` |
-| [!kicksessionban](commands.md#kick-session-ban) | Helper | Helper | `True` | `True` |
-| [!ff](commands.md#friendly-fire) | Moderator | Moderator | `True` | `True` |
-| [!bp](commands.md#burn-player) | Moderator | Moderator | `False` | `False` |
-| [!pp](commands.md#puke-player) | Moderator | Moderator | `False` | `False` |
-| [!ps](commands.md#player-size) | Moderator | Moderator | `False` | `False` |
-| [!tp](commands.md#teleport-player) | Helper | Helper | `False` | `False` |
+| [!info](commands.md#info) | Игрок | Игрок | - | - |
+| [!ms](commands.md#my-stats) | Игрок | Игрок | - | - |
+| [!stats](commands.md#stats) | Игрок | Игрок | - | - |
+| [!sr](commands.md#switch-role) | Игрок | Игрок | - | - |
+| [!lwp](commands.md#lock-weapon-pickup) | Игрок | Игрок | - | - |
+| [!lowp](commands.md#lock-other-weapon-pickup) | Игрок | Игрок | - | - |
+| [!swpm](commands.md#show-weapon-pickup-messages) | Игрок | Игрок | - | - |
+| [!wpat](commands.md#weapon-pickup-ammo-threshold) | Игрок | Игрок | - | - |
+| [!dit](commands.md#disable-item-drop)  | Игрок | Игрок | - | - |
+| [!pt](commands.md#pause-trader) | Помощник | Помощник | `Да` | `Да` |
+| [!upt](commands.md#unpause-trader) | Помощник | Помощник | `Да` | `Да` |
+| [!st](commands.md#skip-trader) | Помощник | Помощник | `Нет` | `Нет` |
+| [!kz](commands.md#kill-zeds) | Помощник | Помощник | `Да` | `Да` |
+| [!nm](commands.md#next-map) | Помощник | Помощник | `Да` | `Да` |
+| [!scw](commands.md#set-current-wave) | Модератор | Модератор | `Нет` | `Нет` |
+| [!ew](commands.md#end-wave) | Модератор | Модератор | `Нет` | `Да` |
+| [!nw](commands.md#next-wave) | Модератор | Модератор | `Нет` | `Нет` |
+| [!mv](commands.md#map-vote) | Модератор | Модератор | `Да` | `Да` |
+| [!spw](commands.md#set-password) | Помощник | Помощник | `Нет` | `Нет` |
+| [!mm](commands.md#max-monsters) | Помощник | Помощник | `Да` | `Да` |
+| [!ws](commands.md#wave-size) | Модератор | Модератор | `Нет` | `Нет` |
+| [!dcws](commands.md#disable-custom-wave-size) | Модератор | Модератор | `Нет` | `Нет` |
+| [!wsf](commands.md#wave-size-fakes) | Модератор | Модератор | `Нет` | `Нет` |
+| [!dwsf](commands.md#disable-wave-size-fakes) | Модератор | Модератор | `Нет` | `Нет` |
+| [!wsm](commands.md#wave-size-multiplier) | Помощник | Помощник | `Да` | `Да` |
+| [!cs](commands.md#cohort-size) | Помощник | Помощник | `Нет` | `Да` |
+| [!dk](commands.md#dosh-kill) | Помощник | Помощник | `Нет` | `Нет` |
+| [!am](commands.md#ammo-multiplier) | Помощник | Помощник | `Да` | `Да` |
+| [!sscp](commands.md#special-squad-count-pct) | Модератор | Помощник | `Нет` | `Да` |
+| [!dcss](commands.md#disable-custom-squad-spawns) | Модератор | Модератор | `Нет` | `Нет` |
+| [!lzsc](commands.md#large-zed-spawn-chance) | Модератор | Модератор | `Нет` | `Да` |
+| [!dlzsc](commands.md#disable-large-zed-spawn-chance) | Модератор | Модератор | `Нет` | `Да` |
+| [!dvs](commands.md#disable-vent-spawns) | Помощник | Помощник | `Да` | `Да` |
+| [!dmlm](commands.md#disable-max-large-monsters) | Модератор | Модератор | `Нет` | `Нет` |
+| [!ad](commands.md#ai-difficulty) | Модератор | Помощник | `Да` | `Да` |
+| [!dcad](commands.md#disable-custom-ai-difficulty) | Модератор | Помощник | `Да` | `Да` |
+| [!pl](commands.md#player-list) | Игрок | Игрок | - | - |
+| [!kill](commands.md#kill) | Модератор | Модератор | `Нет` | `Нет` |
+| [!kick](commands.md#kick) | Помощник | Помощник | `Да` | `Да` |
+| [!kicksessionban](commands.md#kick-session-ban) | Помощник | Помощник | `Да` | `Да` |
+| [!ff](commands.md#friendly-fire) | Модератор | Модератор | `Да` | `Да` |
+| [!bp](commands.md#burn-player) | Модератор | Модератор | `Нет` | `Нет` |
+| [!pp](commands.md#puke-player) | Модератор | Модератор | `Нет` | `Нет` |
+| [!ps](commands.md#player-size) | Помощник | Помощник | `Нет` | `Нет` |
+| [!tp](commands.md#teleport-player) | Помощник | Помощник | `Нет` | `Нет` |

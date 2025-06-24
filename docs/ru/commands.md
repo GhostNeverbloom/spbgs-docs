@@ -1,63 +1,62 @@
-# Chat Commands
+# Чат-команды
 
-List of all available commands.
+Список всех доступных команд.
 
-!!! info "Important things to know:"
+!!! info "Вещи которые стоит учесть:"
 
-    * All commands execute through the game chat (not console!) and start with a prefix `!`;
+    * Все команды применяются через текстовый чат игры (не консоль!) и начинаются с префикса `!`;
 
-    * It's possible to execute a command through the console if you type it as a `say` command, i.e. `say !info`;
+    * Можно применить команду через консоль если прописать ещё в качестве команды `say`, т.е. `say !info`;
 
-    * It's also possible to bind a chat command to a hotkey just like any other console commands, for example: `setbind X say !info`;
+    * Также можно назначить чат-команду на клавишу, как и любую консольную команду, например так: `setbind X say !info`;
 
-    * Setting the incorrect value will revert the command to its default value set in the server configs;
+    * Введение некорректного значения вернёт стандартное значение для команды из серверной конфигурации;
 
-    * Setting any command to `0` will also revert it back to its default value from the configs;
+    * Веедение нуля в качестве значения тоже вернёт стандартное значение из конфигов;
 
-    * Upon entering a command it will execute instantly if you have sufficient [authority level](authoritylevels.md), otherwise will start a vote for applying if it's accessible for voting;
+    * После введения команды она применится сразу если у вас соответствующий [уровень доступа](authoritylevels.md), в противном случае начнётся голосование за применение команды, если оно доступно;
 	
-	* Currently all tweaks done through chat commands reset back to default once match ends, however `boolean` commands might retain their value until server reastart; keep that in mind when changing any of those settings.
+    * На текущий момент все правки сделанные через чат-команды возвращаются на стандартные значения по окончании матча, однако команды-переключатели (true/false) могут сохранять значение до тех пор пока сервер не перезапустится; нужно иметь это в виду при изменении тех или иных настроек.
 
-## Public
+## Публичные
 
-These commands are available for everyone to use without any limitations.
+Эти команды доступны для использования всем без каких-либо ограничений.
 
-| Name | Shortcut | Arguments | Description |
+| Полное название | Название | Аргументы | Описание |
 | --- | --- | --- | --- |
-| [](){ #info }info | | | Shows settings for the current match; only visible to you |
-| [](){ #my-stats }mystats | ms | | Shows personal stats of the current match; only visible to you |
-| [](){ #stats }stats | | `<StatName>` | Shows stats for each player by category for everyone; enter without argument to print out available categories or look them up [here](#available-stats) |
-| [](){ #switch-role }switchrole | sr | | Switches your role from players to spectators or vice versa without reconnecting to the server. Admins can overcap slots above 6 players |
-| [](){ #lock-weapon-pickup }lockweaponpickup | lwp | `<true/false>` | Locks the ability for other players to pick up your guns |
-| [](){ #lock-other-weapon-pickup }lockotherweaponpickup | lowp | `<true/false>` | Locks the ability for you to pick up other people's guns |
-| [](){ #show-weapon-pickup-messages }showweaponpickupmessages | swpm | `<true/false>` | Enables personal chat logging for weapon pick ups. For example, you can see if someone picks up your or someone else's gun |
-| [](){ #weapon-pickup-ammo-threshold }weaponpickupammothreshold | wpat | `<int value from 0 to 100>` | Lock empty weapons from picking up during waves by setting the ammo threshold above which weapons can't be picked up (measured in %) |
-| [](){ #disable-item-drop }disableitemdrop  | dit | `<true/false>` | If `true`, prevents items from dropping into Steam inventory on match end; enable if you feel tired from receiving unnecessary stuff into your inventory |
+| [](){ #info }info | | | Отображает текущие настройки матча; всплывающее окно видно только вам |
+| [](){ #my-stats }mystats | ms | | Отображает персональную статистику за матч; всплывающее окно видно только вам |
+| [](){ #stats }stats | | `<StatName>` | Отображает статистику для каждого игрока по категориям, видную всем; введите без аргумента чтобы вывести список доступных категорий, или посмотрите их [здесь](#available-stats) |
+| [](){ #switch-role }switchrole | sr | | Переключает вашу роль с игрока на спектаторы и наоборот без необходимости перезаходить на сервер; Игроки с уровнем "Админ" могут зайти в полное лобби игнорируя лимит в 6 игроков |
+| [](){ #lock-weapon-pickup }lockweaponpickup | lwp | `<true/false>` | Блокирует остальным игрокам возможность подбирать ваше оружие |
+| [](){ #lock-other-weapon-pickup }lockotherweaponpickup | lowp | `<true/false>` | Блокирует возможность подбирать оружие других людей |
+| [](){ #show-weapon-pickup-messages }showweaponpickupmessages | swpm | `<true/false>` | Включает индивидуальное логирование подбираемого оружия в чат. Например, можно видеть сообщение о том что кто-то подбирает чьё-то оружие |
+| [](){ #weapon-pickup-ammo-threshold }weaponpickupammothreshold | wpat | `<int value from 0 to 100>` | Блокирует подбор пустого оружия посредством установки порога оставшихся патронов (в процентах), ниже которого оружие становится неподбираемым во время волны |
+| [](){ #disable-item-drop }disableitemdrop  | dit | `<true/false>` | Если стоит на `true`, то отключает выпадение предметов в инвентарь Steam по окончании матча; можно использовать если не нравится когда в инвентарь падает ненужный хлам |
 
-!!! info "Commands related to spare guns and item drops will save locally into your configs, so make sure to not have them in `read-only` mode in order for them to work properly."
+!!! info "Настройки команд, касающихся лежащего на земле оружия, сохраняются локально в клиентских конфигах, поэтому для их корректной работы убедитесь что ваши конфиги не находятся в режиме 'только чтения'."
 
-??? question "How weapon pickup system works?"
+??? question "Как работает система блокировки оружия?"
 
-    Weapon locking system is designed for better spare weapon management when playing on public servers
-	since many clueless people tend to not understand that they're not supposed to pick up or sell other
-	people's weapons.
+    Система блокировки оружия предназначена для более удобного менеджмента оружия при игре на публичных серверах (пабах),
+    поскольку множество ничего не подозревающих людей часто не понимают что им не следует подбирать или продавать чужое оружие.
 	
-	* By default everyone can pick up everyone else's weapons;
+	* По умолчанию все могут подбирать оружие других людей;
 	
-	* Once `!lwp` is set to `true`, no one is able to pick up your guns anymore;
+	* Если установить `!lwp` на `true`, никто другой не сможет подбирать ваше оружие;
 	
-	* `!lowp` set to `true` prevents you from picking up other people's guns when you accidentally stumble across them;
+	* `!lowp` установленное на `true` не позволит вам подбирать оружие других игроков если вы случайно натыкаетесь на него;
 	
-	* `!swpm` set to `true` is useful for seeing who picked up whose guns, though we kept this feature disabled by default because not everyone wants to see such messages each and every time;
+	* `!swpm` установленное на `true` полезно для того чтобы видеть кто подбирает чьё оружие, однако мы оставили фичу отключенной по умолчанию, т.к. не все хотят видеть постоянные сообщения о том что кто-то что-то подбирает;
 	
-	* `!wpat` set to `5`-`10` prevents your empty or almost empty guns from being picked up accidentally by yourself when you swap to a spare gun in a heat of a battle (doesn't apply to trader time);
+	* `!wpat` установленное на `5`-`10` не позволит вам подобрать своё опустошённое или почти опустошённое оружие, например во время смены пустого оружия на запасное в пылу боя (работает только во время волны, т.е. вне торговца);
 	
-	* Keep in mind that if you accidentally dropped an empty gun, but then changed your mind because you found an ammo box, you won't be able to pick it up again until you set `!wpat` back to `0`.
+	* Имейте в виду, что если вы случайно выбросите пустое оружие, но потом передумаете и захотите снова подобрать его (например если нашёлся ящик патронов), подобрать его не получится пока не вернуть `!wpat` обратно на `0`.
 	
 [](){ #available-stats }
-??? note "Available stats"
+??? note "Доступные разделы статистики"
 	
-	Here's the list of arguments for the `!stats` command that have long and short names:
+	Здесь список всех возможных аргументов для команды `!stats`, которые могут прописываться как полным, так и укороченным названием:
 	
 	* `Accuracy` (`acc`)
 	* `DamageDealt` (`damaged`)
@@ -72,24 +71,24 @@ These commands are available for everyone to use without any limitations.
 	* `ShotsFired` (`shotsf`)
 	* `ShotsHit` (`shotsh`)
 
-## Utility
+## Утилитарные
 
-| Name | Shortcut | Arguments | Description |
+| Полное название | Название | Аргументы | Описание |
 | --- | --- | --- | --- |
-| [](){ #pause-trader }pausetrader | pt | | Temporarily pauses trader time; lasts 180 seconds and then auto-resumes |
-| [](){ #unpause-trader }unpausetrader | upt | | Resumes trader time |
-| [](){ #skip-trader }skiptrader | st | | Skips trader time; not available for voting because vanilla skip trader option exists |
-| [](){ #kill-zeds }killzeds | kz | | Kills 5 alive zeds; has 180s long usage cooldown. Use when need to kiil stuck zeds on certain maps |
-| [](){ #next-map }nextmap | nm | | Instantly switches current map to the specified one |
-| [](){ #set-current-wave }setcurrentwave | scw | `<number>` | Starts a wave specified by its number |
-| [](){ #end-wave }endwave | ew | | Ends current wave |
-| [](){ #next-wave }nextwave | nw | `<number>` | Sets next wave to the specified one |
-| [](){ #map-vote }mapvote | mv | | Forces end of current match and enables map selection vote |
-| [](){ #set-password }setpassword | spw | `<password>` | Sets temporary password for the current match; resets to `none` when entered without an argument or when match ends |
+| [](){ #pause-trader }pausetrader | pt | | Временно останавливает обратный отсчёт торговца; длится 180 секунд, после чего таймер автоматически возобновляется |
+| [](){ #unpause-trader }unpausetrader | upt | | Возобновляет таймер торговца |
+| [](){ #skip-trader }skiptrader | st | | Пропускает таймер торговца; недоступно для голосования, т.к. аналогичная опция с голосованием уже есть в игре |
+| [](){ #kill-zeds }killzeds | kz | | Убивает 5 живых зедов; имеет 180-секундный кулдаун на использование. Применяется в случаях когда зеды застревают где-то на карте |
+| [](){ #next-map }nextmap | nm | `<KF-MapName>` | Незамедлительно меняет текущую карту на указанную |
+| [](){ #set-current-wave }setcurrentwave | scw | `<number>` | Начинает указанную по номеру волну |
+| [](){ #end-wave }endwave | ew | | Завершает текущую волну |
+| [](){ #next-wave }nextwave | nw | `<number>` | Назначает то, какая волна будет следующей в очереди |
+| [](){ #map-vote }mapvote | mv | | Форсирует окончание матча и начинает голосование за выбор карты |
+| [](){ #set-password }setpassword | spw | `<password>` | Устанавливает временный пароль на текущую сессию; возвращается на состояние без пароля если не ввести пароль при введении команды |
 
-??? example "List of true map names used with `!nm` command"
+??? example "Список точных названий карт для команды `!nm`"
 
-    !!! info "Keep in mind that map names are not case sensitive and can be written in both lower and upper case."
+    !!! info "Стоит учесть, что при введении названия карты регистр букв не важен и они могут писаться как угодно."
 
     === "Vanilla Maps"
 
@@ -380,65 +379,65 @@ These commands are available for everyone to use without any limitations.
         KF-Stalker-Yantar
 		```
 
-## Difficulty
+## Настройки сложности
 
-| Name | Shortcut | Arguments | Description |
+| Полное название | Название | Аргументы | Описание |
 | --- | --- | --- | --- |
-| [](){ #max-monsters }maxmonsters | mm | `<integer value>` | Defines how much alive zeds can be present on map at once; hence why is referred to as [`MaxMonsters`](https://wiki.killingfloor2.com/index.php?title=Survival_Mode#Maximum_ZEDs_At_Time), same with [CD](https://github.com/notblackout/kf2-controlled-difficulty/blob/master/options.md#maxmonsters) |
-| [](){ #wave-size }wavesize | ws | `<integer value>` | Sets custom number of zeds to spawn per wave; not recommnded for manual tweaking because it overrides the numbers for all waves |
-| [](){ #disable-custom-wave-size }disablecustomwavesize | dcws | `<true/false>` | Disables custom wave size system defined by `!wavesize`; if set to `true`, wave lengths will fall back to vanilla |
-| [](){ #wave-size-fakes }wavesizefakes | wsf | `<integer value>` | (Deprecated) Sets [wave size fakes](#fakes-def); applies to custom wave size as well |
-| [](){ #disable-wave-size-fakes }disablewavesizefakes | dwsf | `<true/false>` | (Deprecated) Disables wave size fakes system; if set to `true`, wavesizefakes won't take effect |
-| [](){ #wave-size-multiplier }wavesizemultiplier | wsm | `<float multiplier>` | Multiplies the amount of zeds per each wave; respects the initial wave size, and so is useful for adjusting zed count without breaking the flow of the match |
-| [](){ #cohort-size }cohortsize | cs | `<integer value>` | Also referred to as `AI Spawn At Once`; defines how much zeds are spawned simultaneously per each tick; if set to 8, 8 zeds will spawn each second |
-| [](){ #dosh-kill }doshkill | dk | `<float value>` | Sets multiplier for dosh gained from killing zeds; in a normal game the value is dynamic, so it makes little to no sense to tweak it manually |
-| [](){ #ammo-multiplier }ammomultiplier | am | `<float multiplier>` | Sets ammo multiplier for all weapons; by default each class has own values, overriding them will set the same value for all weapon classes |
-| [](){ #special-squad-count-pct }specialsquadcountpct | sscp | `<float value from 0 to 1>` | Sets spawn percentage for [special zed squads](customspawns.md#special-squad-count-pct-def) (larges/mediums); only works if [`disablecustomsquadspawns`](#disable-custom-squad-spawns) is set to `false` |
-| [](){ #disable-custom-squad-spawns }disablecustomsquadspawns | dcss | `<true/false>` | Disables special squad spawn system entirely; if set to `true`, returns zed spawns to vanilla spawn cycle |
-| [](){ #large-zed-spawn-chance }largezedspawnchance | lzsc | `<float value from 0 to 1>` | Sets [chance](customspawns.md#large-zed-spawn-chance-def) for zeds to spawn as larges; works additively on top of any existing spawn systems |
-| [](){ #disable-large-zed-spawn-chance }disablelargezedspawnchance | dlzsc | `<true/false>` | Disables large zed spawn chance system; if set to `true`, disables largezedspawnchance |
-| [](){ #disable-vent-spawns }disableventspawns | dvs | `<true/false>` | Disables zed spawns from vents and sewers |
-| [](){ #disable-max-large-monsters }disablemaxlargemonsters | dmlm | `<true/false>` | Disables large zeds alive limit which works similarly to `MaxMonsters` but for larges only; relies on pre-defined values in server configs |
-| [](){ #ai-difficulty }aidifficulty | ad | `<index>` | Sets currently active preset for the AI Difficulty system |
-| [](){ #disable-custom-ai-difficulty }disablecustomaidifficulty | dcad | `<true/false>` | Disables AI Difficulty system entirely, preventing [`!ad`](#ai-difficulty) from working |
+| [](){ #max-monsters }maxmonsters | mm | `<integer value>` | Определяет сколько живых зедов могут находиться на карте единовременно; поэтому и называется [`MaxMonsters`](https://wiki.killingfloor2.com/index.php?title=Survival_Mode#Maximum_ZEDs_At_Time), как и на [CD](https://github.com/notblackout/kf2-controlled-difficulty/blob/master/options.md#maxmonsters) |
+| [](){ #wave-size }wavesize | ws | `<integer value>` | Указывает точное число зедов на волну; не рекомендуется изменять вручную, потому что команда перезаписывает число зедов для всех волн |
+| [](){ #disable-custom-wave-size }disablecustomwavesize | dcws | `<true/false>` | Отключает систему кастомной длины волн, которая задаётся через [`!wavesize`](#wave-size); если `true`, то длина волн становится как в ванильной игре |
+| [](){ #wave-size-fakes }wavesizefakes | wsf | `<integer value>` | (Устарело) Устанавливает [фейки для длины волн](#fakes-def); Применяется и к кастомной системе длины волн |
+| [](){ #disable-wave-size-fakes }disablewavesizefakes | dwsf | `<true/false>` | (Устарело) Отключает систему фейков для длины волн; если стоит на `true`, то [`wavesizefakes`](#wave-size-fakes) не даёт эффекта |
+| [](){ #wave-size-multiplier }wavesizemultiplier | wsm | `<float multiplier>` | Умножает количество зедов в волне на указанный коэффициент; учитывает изначальную длину волн, поэтому полезно для точной настройки волн, не ломая длину остальных волн |
+| [](){ #cohort-size }cohortsize | cs | `<integer value>` | Также `AI Spawn At Once`; определяет сколько зедов могут заспавниться единовременно за один тик спавн менеджера; если стоит на 8, то игра будет спавнить 8 зедов в секунду |
+| [](){ #dosh-kill }doshkill | dk | `<float multiplier>` | Множитель количества денег, получаемых за убийство зедов; в обычной игре это значение меняется динамически по ходу игры, поэтому трогать его практически бессмысленно |
+| [](){ #ammo-multiplier }ammomultiplier | am | `<float multiplier>` | Множитель количества патронов для всего оружия; по умолчанию каждый класс оружия имеет собственные значения, поэтому ручная настройка перезапишет значения для всех классов на указанное вами |
+| [](){ #special-squad-count-pct }specialsquadcountpct | sscp | `<float value from 0 to 1>` | Определяет процентаж [особых отрядов зедов](customspawns.md#special-squad-count-pct-def) (биги/медиумы[^1]); работает только если [`disablecustomsquadspawns`](#disable-custom-squad-spawns) стоит на `false` |
+| [](){ #disable-custom-squad-spawns }disablecustomsquadspawns | dcss | `<true/false>` | Полностью отключает систему спавна особых отрядов зедов; если стоит на `true`, возвращает ванильный спавн цикл зедов |
+| [](){ #large-zed-spawn-chance }largezedspawnchance | lzsc | `<float value from 0 to 1>` | Устанавливает [шанс](customspawns.md#large-zed-spawn-chance-def) спавна зедов в качестве бигов; работает в дополнение к другим имеющимся системам спавна |
+| [](){ #disable-large-zed-spawn-chance }disablelargezedspawnchance | dlzsc | `<true/false>` | Отключает систему шанса спавна бигов; если `true`, то отключает `largezedspawnchance` |
+| [](){ #disable-vent-spawns }disableventspawns | dvs | `<true/false>` | Отключает спавн зедов из вентиляций и люков |
+| [](){ #disable-max-large-monsters }disablemaxlargemonsters | dmlm | `<true/false>` | (Устарело) Отключает лимит числа живых бигов на карте, который работает схожим образом с `MaxMonsters`, но только для бигов; сами лимиты выставлены в серверых конфигах |
+| [](){ #ai-difficulty }aidifficulty | ad | `<index>` | Устанавливает активный пресет для системы [AI Difficulty](aidifficulty.md) |
+| [](){ #disable-custom-ai-difficulty }disablecustomaidifficulty | dcad | `<true/false>` | Полностью выключает систему [AI Difficulty](aidifficulty.md), тем самым отключая действие команды [`!ad`](#ai-difficulty) |
 
-!!! info "Term [](){ #fakes-def }[fakes](#wave-size-fakes) stands for a system that imitates a certain amount of players without them actually being in a match; basically 5 fakes means the game will act as if there were 5 players regardless of how many actual players there actually is."
+!!! info "Термин [](){ #fakes-def }[фейки](#wave-size-fakes) относится к системе, которая для определённых механик имитирует заданное количество игроков, отличающееся от их фактического количества; по сути 5 фейков значит что игра будет себя вести так будто в матче находится 5 игроков, вне зависимости от того сколько игроков на самом деле."
 
-## Player-targeted
+## Направленные на игрока
 
-Used by Admin, Moderator and Helper [roles](authoritylevels.md) for managing players on server.
+Используются [ролями](authoritylevels.md) "Админ", "Модератор" и "Помощник" для менеджмента игроков на сервере.
 
-These commands won't work on those players who are logged in as server admins.
+Эти команды не будут работать на тех игроках которые авторизованы как админы сервера.
 
-!!! warning "Highest authority level (Admin) is not equal to being logged in as server admin, so most of the player-targeted commands will work on any players regardless of their authority level unless they're logged in as server admin."
+!!! warning "Наивысший уровень доступа к командам ("Админ") -- это не то же самое что и авторизация в качестве админа сервера, поэтому большинство команд направленных на игроков будут работать на большинстве игроков вне зависимости от их уровня доступа к командам, только если они не авторизованы как админы сервера."
 
-| Name | Shortcut | Arguments | Description |
+| Полное название | Название | Аргументы | Описание |
 | --- | --- | --- | --- |
-| [](){ #player-list }playerlist | pl | | Prints out a list of current players with their local IDs |
-| [](){ #kill }kill | | `<target>` | Kills specified players (doesn't work during trader time) |
-| [](){ #kick }kick | | `<target>` |  Kicks players from the server (they can join back afterwards) |
-| [](){ #kick-session-ban }kicksessionban | | `<target>` | Kicks players from the server without ability to join back until current session ends as if they were vote kicked |
-| [](){ #friendly-fire }friendlyfire | ff | `<target>` `<amount>` | Enables friendly fire towards specified player, where `<amount>` 0 means no FF, 1 means full FF; if player dies the value resets back to `0` |
-| [](){ #burn-player }burnplayer | bp | `<target>` `<amount>` | Applies burning effect on the specified player that lasts 10 seconds, where `<amount>` is the exact value of damage per second |
-| [](){ #puke-player }pukeplayer | pp | `<target>` `<amount>` | Applies puke effect from the bloat bile on the specified player that lasts 10 seconds, where `<amount>` is the exact value of damage per second |
-| [](){ #player-size }playersize | ps | `<target>` `<multiplier>` | Scales the character model of specified player, where `<amount>` is a multiplier (i.e. 1 means no scaling) |
-| [](){ #teleport-player }teleportplayer | tp | `<target>` | Teleports specified player based on where your camera view is pointed at (only flat surfaces will work) |
+| [](){ #player-list }playerlist | pl | | Отображает текущий список игроков с их локальными ID |
+| [](){ #kill }kill | | `<target>` | Убивает указанного игрока (не работает во время торговца) |
+| [](){ #kick }kick | | `<target>` | Удаляет игрока с сервера с возможностью зайти обратно |
+| [](){ #kick-session-ban }kicksessionban | | `<target>` | Удаляет игрока с сервера без возможности зайти обратно в текущую сессию (аналогично голосованию за удаление) |
+| [](){ #friendly-fire }friendlyfire | ff | `<target>` `<amount>` | Включает огонь по своим в отношении указанного игрока, где `<amount>` 0 означает что огня по своим нет, 1 -- максимальный огонь по своим; когда игрок умирает, значение возвращается на `0` |
+| [](){ #burn-player }burnplayer | bp | `<target>` `<amount>` | Применяет эффект горения на указанного игрока который длится 10 секунд, где `<amount>` это величина урона в секунду |
+| [](){ #puke-player }pukeplayer | pp | `<target>` `<amount>` | Применяет эффект рвоты толстяка на указанного игрока который длится 10 секунд, где `<amount>` это величина урона в секунду |
+| [](){ #player-size }playersize | ps | `<target>` `<multiplier>` | Изменяет размер модели персонажа для указанного игрока, где `<amount>` это множитель (т.е. 1 - без увеличения) |
+| [](){ #teleport-player }teleportplayer | tp | `<target>` | Телепортирует указанного игрока в то место куда направлена ваша камера (работает только на плоских поверхностях) |
 
-!!! info "Player-targeted commands"
+!!! info "Команды направленные на игрока"
 
-    Commands with `<target>` argument can take few different types of values:
+    Команды с аргументом `<target>` могут принимать несколько типов значений:
 	
-	* numeric `index` of player that's returned by `!pl` command;
+	* Числовой индекс игрока, полученнй с помощью команды `!pl`;
 	
-	* `me` or `self`;
+	* `me` или `self` (применяет команду на себя);
 	
-	* `all`.
+	* `all` (применяет команду на всех).
 
-## Usage examples
+## Примеры использования
 
-!!! example "Examples by value type"
+!!! example "Примеры по типу данных"
 
-    === "Integer"
+    === "Целое"
 
 	    * __`!ad 3`__
 
@@ -446,7 +445,7 @@ These commands won't work on those players who are logged in as server admins.
 
         * __`!wavesize 160`__
 
-    === "Float"
+    === "С точкой"
 
 	    * __`!sscp 0.5`__
 
@@ -454,7 +453,7 @@ These commands won't work on those players who are logged in as server admins.
 
 	    * __`!ammomultiplier 2.5`__
 
-    === "Boolean"
+    === "Переключатель"
 
 	    * __`!dcad false`__
 
@@ -462,7 +461,7 @@ These commands won't work on those players who are logged in as server admins.
 
 	    * __`lockweaponpickup false`__
 
-    === "String/Enum"
+    === "Текстовое"
 
 	    * __`!nm kf-nuked`__
 
@@ -470,10 +469,12 @@ These commands won't work on those players who are logged in as server admins.
 
         * __`!spw penis228`__
 
-    === "Multi-value"
+    === "Комбинированное"
 
 	    * __`!friendlyfire all 0.5`__
 
 	    * __`!bp 128 5`__
 
         * __`!kill me`__
+
+[^1]: Биги (Larges) -- Мясники и Отбивальщики, медиумы (Mediums) -- Хаски, Сирены, Толстяки и Берсеркеры.

@@ -1,8 +1,8 @@
-# Authority Levels
+# Role Authority System
 
 ## Basics
 
-All chat commands work under the authority level system. This is how it works:
+All chat commands work under the role authority system. This is how it works:
 
 * All commands have certain level of authority needed for them to be executed;
 
@@ -14,10 +14,10 @@ All chat commands work under the authority level system. This is how it works:
 
 * The authority level requirements for each command can be different depending on which server they're used on;
 
-* More detailed info on command groups you can find [below](#command-grouping).
+* More detailed info on authority levels you can find [below](#authority-levels).
 
-[](){ #command-grouping }
-## Command grouping
+[](){ #authority-levels }
+## Authority Levels
 
 For safety reasons the accessibility of certain commands is different across the servers. Here's the actual list of commands and their properties:
 
@@ -26,7 +26,7 @@ For safety reasons the accessibility of certain commands is different across the
 | [!info](commands.md#info) | Player | Player | - | - |
 | [!ms](commands.md#my-stats) | Player | Player | - | - |
 | [!stats](commands.md#stats) | Player | Player | - | - |
-| [!sr](commands.md#switch-role) | Player, Admin | Player, Admin | - | - |
+| [!sr](commands.md#switch-role) | Player | Player | - | - |
 | [!lwp](commands.md#lock-weapon-pickup) | Player | Player | - | - |
 | [!lowp](commands.md#lock-other-weapon-pickup) | Player | Player | - | - |
 | [!swpm](commands.md#show-weapon-pickup-messages) | Player | Player | - | - |
@@ -66,5 +66,5 @@ For safety reasons the accessibility of certain commands is different across the
 | [!ff](commands.md#friendly-fire) | Moderator | Moderator | `True` | `True` |
 | [!bp](commands.md#burn-player) | Moderator | Moderator | `False` | `False` |
 | [!pp](commands.md#puke-player) | Moderator | Moderator | `False` | `False` |
-| [!ps](commands.md#player-size) | Moderator | Moderator | `False` | `False` |
+| [!ps](commands.md#player-size) | Helper | Helper | `False` | `False` |
 | [!tp](commands.md#teleport-player) | Helper | Helper | `False` | `False` |

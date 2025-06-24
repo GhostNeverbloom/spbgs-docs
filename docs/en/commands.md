@@ -4,7 +4,7 @@ List of all available commands.
 
 !!! info "Important things to know:"
 
-    * All commands execute through the game chat (not console!) and start with a prefix `!`;
+    * All commands execute through the game chat (not console!) and start with the prefix `!`;
 
     * It's possible to execute a command through the console if you type it as a `say` command, i.e. `say !info`;
 
@@ -27,11 +27,11 @@ These commands are available for everyone to use without any limitations.
 | [](){ #info }info | | | Shows settings for the current match; only visible to you |
 | [](){ #my-stats }mystats | ms | | Shows personal stats of the current match; only visible to you |
 | [](){ #stats }stats | | `<StatName>` | Shows stats for each player by category for everyone; enter without argument to print out available categories or look them up [here](#available-stats) |
-| [](){ #switch-role }switchrole | sr | | Switches your role from players to spectators or vice versa without reconnecting to the server. Admins can overcap slots above 6 players |
+| [](){ #switch-role }switchrole | sr | | Switches your role from players to spectators or vice versa without reconnecting to the server; Admins can overcap slots above 6 players |
 | [](){ #lock-weapon-pickup }lockweaponpickup | lwp | `<true/false>` | Locks the ability for other players to pick up your guns |
 | [](){ #lock-other-weapon-pickup }lockotherweaponpickup | lowp | `<true/false>` | Locks the ability for you to pick up other people's guns |
 | [](){ #show-weapon-pickup-messages }showweaponpickupmessages | swpm | `<true/false>` | Enables personal chat logging for weapon pick ups. For example, you can see if someone picks up your or someone else's gun |
-| [](){ #weapon-pickup-ammo-threshold }weaponpickupammothreshold | wpat | `<int value from 0 to 100>` | Lock empty weapons from picking up during waves by setting the ammo threshold above which weapons can't be picked up (measured in %) |
+| [](){ #weapon-pickup-ammo-threshold }weaponpickupammothreshold | wpat | `<int value from 0 to 100>` | Locks empty weapons from picking up during waves by setting the ammo threshold below which weapons can't be picked up (measured in %) |
 | [](){ #disable-item-drop }disableitemdrop  | dit | `<true/false>` | If `true`, prevents items from dropping into Steam inventory on match end; enable if you feel tired from receiving unnecessary stuff into your inventory |
 
 !!! info "Commands related to spare guns and item drops will save locally into your configs, so make sure to not have them in `read-only` mode in order for them to work properly."
@@ -80,7 +80,7 @@ These commands are available for everyone to use without any limitations.
 | [](){ #unpause-trader }unpausetrader | upt | | Resumes trader time |
 | [](){ #skip-trader }skiptrader | st | | Skips trader time; not available for voting because vanilla skip trader option exists |
 | [](){ #kill-zeds }killzeds | kz | | Kills 5 alive zeds; has 180s long usage cooldown. Use when need to kiil stuck zeds on certain maps |
-| [](){ #next-map }nextmap | nm | | Instantly switches current map to the specified one |
+| [](){ #next-map }nextmap | nm | `<KF-MapName>` | Instantly switches current map to the specified one |
 | [](){ #set-current-wave }setcurrentwave | scw | `<number>` | Starts a wave specified by its number |
 | [](){ #end-wave }endwave | ew | | Ends current wave |
 | [](){ #next-wave }nextwave | nw | `<number>` | Sets next wave to the specified one |
@@ -391,14 +391,14 @@ These commands are available for everyone to use without any limitations.
 | [](){ #disable-wave-size-fakes }disablewavesizefakes | dwsf | `<true/false>` | (Deprecated) Disables wave size fakes system; if set to `true`, wavesizefakes won't take effect |
 | [](){ #wave-size-multiplier }wavesizemultiplier | wsm | `<float multiplier>` | Multiplies the amount of zeds per each wave; respects the initial wave size, and so is useful for adjusting zed count without breaking the flow of the match |
 | [](){ #cohort-size }cohortsize | cs | `<integer value>` | Also referred to as `AI Spawn At Once`; defines how much zeds are spawned simultaneously per each tick; if set to 8, 8 zeds will spawn each second |
-| [](){ #dosh-kill }doshkill | dk | `<float value>` | Sets multiplier for dosh gained from killing zeds; in a normal game the value is dynamic, so it makes little to no sense to tweak it manually |
+| [](){ #dosh-kill }doshkill | dk | `<float multiplier>` | Sets multiplier for dosh gained from killing zeds; in a normal game the value is changed dynamically throughout the game, so it makes little to no sense to tweak it manually |
 | [](){ #ammo-multiplier }ammomultiplier | am | `<float multiplier>` | Sets ammo multiplier for all weapons; by default each class has own values, overriding them will set the same value for all weapon classes |
-| [](){ #special-squad-count-pct }specialsquadcountpct | sscp | `<float value from 0 to 1>` | Sets spawn percentage for [special zed squads](customspawns.md#special-squad-count-pct-def) (larges/mediums); only works if [`disablecustomsquadspawns`](#disable-custom-squad-spawns) is set to `false` |
+| [](){ #special-squad-count-pct }specialsquadcountpct | sscp | `<float value from 0 to 1>` | Sets spawn percentage for [special zed squads](customspawns.md#special-squad-count-pct-def) (Larges/Mediums); only works if [`disablecustomsquadspawns`](#disable-custom-squad-spawns) is set to `false` |
 | [](){ #disable-custom-squad-spawns }disablecustomsquadspawns | dcss | `<true/false>` | Disables special squad spawn system entirely; if set to `true`, returns zed spawns to vanilla spawn cycle |
 | [](){ #large-zed-spawn-chance }largezedspawnchance | lzsc | `<float value from 0 to 1>` | Sets [chance](customspawns.md#large-zed-spawn-chance-def) for zeds to spawn as larges; works additively on top of any existing spawn systems |
-| [](){ #disable-large-zed-spawn-chance }disablelargezedspawnchance | dlzsc | `<true/false>` | Disables large zed spawn chance system; if set to `true`, disables largezedspawnchance |
+| [](){ #disable-large-zed-spawn-chance }disablelargezedspawnchance | dlzsc | `<true/false>` | Disables large zed spawn chance system; if set to `true`, disables `largezedspawnchance` |
 | [](){ #disable-vent-spawns }disableventspawns | dvs | `<true/false>` | Disables zed spawns from vents and sewers |
-| [](){ #disable-max-large-monsters }disablemaxlargemonsters | dmlm | `<true/false>` | Disables large zeds alive limit which works similarly to `MaxMonsters` but for larges only; relies on pre-defined values in server configs |
+| [](){ #disable-max-large-monsters }disablemaxlargemonsters | dmlm | `<true/false>` | (Deprecated) Disables large zeds alive limit which works similarly to `MaxMonsters` but for larges only; relies on pre-defined values in server configs |
 | [](){ #ai-difficulty }aidifficulty | ad | `<index>` | Sets currently active preset for the AI Difficulty system |
 | [](){ #disable-custom-ai-difficulty }disablecustomaidifficulty | dcad | `<true/false>` | Disables AI Difficulty system entirely, preventing [`!ad`](#ai-difficulty) from working |
 
@@ -415,9 +415,9 @@ These commands won't work on those players who are logged in as server admins.
 | Name | Shortcut | Arguments | Description |
 | --- | --- | --- | --- |
 | [](){ #player-list }playerlist | pl | | Prints out a list of current players with their local IDs |
-| [](){ #kill }kill | | `<target>` | Kills specified players (doesn't work during trader time) |
-| [](){ #kick }kick | | `<target>` |  Kicks players from the server (they can join back afterwards) |
-| [](){ #kick-session-ban }kicksessionban | | `<target>` | Kicks players from the server without ability to join back until current session ends as if they were vote kicked |
+| [](){ #kill }kill | | `<target>` | Kills specified player (doesn't work during trader time) |
+| [](){ #kick }kick | | `<target>` | Kicks player from the server (they can join back afterwards) |
+| [](){ #kick-session-ban }kicksessionban | | `<target>` | Kicks player from the server without ability to join back until current session ends as if they were vote kicked |
 | [](){ #friendly-fire }friendlyfire | ff | `<target>` `<amount>` | Enables friendly fire towards specified player, where `<amount>` 0 means no FF, 1 means full FF; if player dies the value resets back to `0` |
 | [](){ #burn-player }burnplayer | bp | `<target>` `<amount>` | Applies burning effect on the specified player that lasts 10 seconds, where `<amount>` is the exact value of damage per second |
 | [](){ #puke-player }pukeplayer | pp | `<target>` `<amount>` | Applies puke effect from the bloat bile on the specified player that lasts 10 seconds, where `<amount>` is the exact value of damage per second |
