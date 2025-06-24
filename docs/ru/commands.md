@@ -90,7 +90,7 @@
 
     !!! info "Стоит учесть, что при введении названия карты регистр букв не важен и они могут писаться как угодно."
 
-    === "Vanilla Maps"
+    === "Оригинальные"
 
         ``` markdown
         KF-Airship
@@ -136,7 +136,7 @@
         KF-ZedLanding
         ```
 		
-    === "Popular Custom Maps"
+    === "Популярные кастомные"
 
         ``` markdown
 		kf-area52_a
@@ -153,7 +153,7 @@
 		KF-Vortex-CDEdit
         ```
 	
-	=== "Other Maps (Do NOT Click)"
+	=== "Другие (НЕ нажимать!)"
 	
 	    ``` markdown
 		
