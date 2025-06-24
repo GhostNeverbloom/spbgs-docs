@@ -22,6 +22,6 @@
   [Чат-команды]: commands.md
   [Система ролей авторизации]: authoritylevels.md
   [Основы менеджмента]: managementbasics.md
-  [Кастомная система спавнов]: customspawns.md
+  [Кастомная система спавна]: customspawns.md
   [Система AI Difficulty]: aidifficulty.md
   [Основы HoE+]: hoeplus.md
