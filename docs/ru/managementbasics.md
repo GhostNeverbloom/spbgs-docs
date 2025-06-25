@@ -81,7 +81,7 @@
 
 Если опция не включена по умолчанию, она может быть включена установкой [`!dcad`](commands.md#disable-custom-ai-difficulty) на `false`, и настроена командой [`!ad`](commands.md#ai-difficulty) с соответствующим [индексом](aidifficulty.md#available-presets).
 
-!!! info "Как было упомянуто [здесь](aidifficulty.md#available-presets), на ванилле доступны не все пресеты в качестве защитного ограничения."
+!!! info "Как было упомянуто [здесь](aidifficulty.md#available-presets), на ванилле доступны не все пресеты в качестве меры предосторожности."
 
 * [`!dcad`](commands.md#disable-custom-ai-difficulty) установленная на `false` включает систему, `true` соответственно выключает; включена по умолчанию на Precision/HoE+ серверах.
 

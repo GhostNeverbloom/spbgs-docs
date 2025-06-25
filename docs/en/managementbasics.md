@@ -83,7 +83,7 @@ This is where most of the magic happens since more Mediums and Larges essentiall
 
 If not enabled by default, it can be switched on by setting [`!dcad`](commands.md#disable-custom-ai-difficulty) to `false`, and adjusted with [`!ad`](commands.md#ai-difficulty) set to proper [index](aidifficulty.md#available-presets).
 
-!!! info "As mentioned [here](aidifficulty.md#available-presets), not all presets are available on Vanilla servers for safety reasons."
+!!! info "As mentioned [here](aidifficulty.md#available-presets), not all presets are available on Vanilla servers as a precaution measure."
 
 * [`!dcad`](commands.md#disable-custom-ai-difficulty) set to `false` enables the system, `true` turns it off; enabled by default on Precision/HoE+ servers.
 
