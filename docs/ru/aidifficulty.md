@@ -34,7 +34,7 @@
 [](){ #ai-difficulty-presets }
 ## Описание пресетов зедов
 
-=== "Киста"
+=== "Cyst"
 
     <div class="grid" markdown>
 
@@ -80,7 +80,7 @@
 
     </div>
 
-=== "Клот"
+=== "Clot"
 
     <div class="grid" markdown>
 
@@ -129,7 +129,7 @@
 
     !!! info "Мятежники полностью отключены во всех пресетах кроме ванильного."
 
-=== "Слэшер"
+=== "Slasher"
 
     <div class="grid" markdown>
 
@@ -176,7 +176,7 @@
 
     </div>
 
-=== "Ползун"
+=== "Cralwer"
 
     <div class="grid" markdown>
 
@@ -225,7 +225,7 @@
 
     !!! info "Элитные пауки полностью отключены на всех Precision/HoE+ серверах."
 
-=== "Сталкер"
+=== "Stalker"
 
     <div class="grid" markdown>
 
@@ -272,7 +272,7 @@
 
     </div>
 
-=== "Берсерк"
+=== "Gorefast"
 
     <div class="grid" markdown>
 
@@ -362,7 +362,7 @@
 
     </div>
 
-=== "Берсерк (2 меча)"
+=== "Gorefiend"
 
     <div class="grid" markdown>
 
@@ -405,7 +405,7 @@
 
     !!! info "Берсерки с 2 мечами полностью отключены в пресетах Harder и Nightcore."
 
-=== "Толстяк"
+=== "Bloat"
 
     <div class="grid" markdown>
 
@@ -470,7 +470,7 @@
 
     </div>
 
-=== "Хаск"
+=== "Husk"
 
     <div class="grid" markdown>
 
@@ -626,7 +626,7 @@
 
         То же самое с элитными версиями (EDAR'ами), которые полностью отключены на HoE+/Precision серверах.
 
-=== "Сирена"
+=== "Siren"
 
     <div class="grid" markdown>
 
@@ -722,7 +722,7 @@
 
     !!! info "Параметр __`Solo Damage Modifier`__ не был затронут в качестве компромисса для публичных серверов; опция по большей части актуальна в соло-матчах, которые чаще происходят при использовании режима SoloMode из [CD CP](https://steamcommunity.com/sharedfiles/filedetails/?id=2052571175), но на HoE+ это не так актуально."
 
-=== "Мясник"
+=== "Scrake"
 
     <div class="grid" markdown>
 
@@ -800,7 +800,7 @@
 
     </div>
 
-=== "Отбивальщик"
+=== "Fleshpound"
 
     <div class="grid" markdown>
 
