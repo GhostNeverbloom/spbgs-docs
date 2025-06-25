@@ -32,7 +32,7 @@
 | [!lowp](commands.md#lock-other-weapon-pickup) | Игрок | Игрок | - | - |
 | [!swpm](commands.md#show-weapon-pickup-messages) | Игрок | Игрок | - | - |
 | [!wpat](commands.md#weapon-pickup-ammo-threshold) | Игрок | Игрок | - | - |
-| [!dit](commands.md#disable-item-drop)  | Игрок | Игрок | - | - |
+| [!dit](commands.md#disable-item-drop) | Игрок | Игрок | - | - |
 | [!pt](commands.md#pause-trader) | Помощник | Помощник | `Да` | `Да` |
 | [!upt](commands.md#unpause-trader) | Помощник | Помощник | `Да` | `Да` |
 | [!st](commands.md#skip-trader) | Помощник | Помощник | `Нет` | `Нет` |

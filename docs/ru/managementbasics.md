@@ -1,94 +1,116 @@
-# Management basics
+# Основы менеджмента
 
-## Navigating through commands
+## Навигация по командам
 
-There is two ways of using commands on the servers: through [in-game chat](commands.md) and the radial menu.
+Есть два способа использования команд на серверах: через [игровой чат](commands.md) и круговое меню.
 
-A custom radial commands menu is available through pressing `J` in the game. Currently its key is forced through server-side and cannot be bound to any different hotkey.
+При зажатии `J` откроется круговое меню с выбором чат-команд. На данный момент клавиша назначается принудительно со стороны сервера и не может быть переназначена; её можно переназначить консольной командой `setbind <кнопка> GBA_ShowVoteComms`, однако это будет работать только на время текущей сессии и настройки сбросятся при перезаходе на сервер. В будущем постараемся поработать над этой механикой и довести её до ума.
 
-It has a selection of commands serving as a shortcut for those who don't want to remember or type the most used commands. Executing them through both the chat and the command selector has the same effent and is entirely equivalent.
+В этом меню есть определённый набор команд, который выступает своего рода быстрым доступом для тех кто не хочет запоминать команды или не хочет вписывать их вручную. Запуск команд через круговое меню и через чат равноценен и имеет одинаковый эффект.
 
-!!! info "Note that the behaviour of some commands is [different](authoritylevels.md#authority-levels) on Vanilla and HoE+, and so is the exact selection of commands in the menu."
+!!! info "Нужно учесть, что поведение некоторых команд [различается](authoritylevels.md#authority-levels) на ванилле и HoE+, соответственно различается набор команд внутри меню."
 
-## Console & Customization
+## Консольные настройки
 
-As mentioned [here](commands.md), all commands can be bound to any keyboard button just like any other game actions, which is done through the `say` command:
+Как было упомянуто [здесь](commands.md), все команды могут быть назначены на любую клвишу, как и любые другие опции игры, что можно сделать через консольную команду `say`:
 
 `setbind X say !pausetrader`
 
-Apart from that, there is a useful console comamnd that's unique for all SPB-GS servers called `CorpseCleanup`. It has the same effect as `ClearCorpses` from Vanilla and [CD Chokepoints Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=2052571175), and has the same 60 seconds cooldown as the latter one.
+Кроме того, есть полезная команда, уникальная для всех SPB-GS серверов, которая называется `CorpseCleanup`. Она работает так же как `ClearCorpses` с ванильной игры и из [CD Chokepoints Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=2052571175), и имеет такую же 60-секундную зедержку как на [CD CP](https://steamcommunity.com/sharedfiles/filedetails/?id=2052571175).
 
-The `ClearCorpses` command is widely used by CD players for quick zed corpse removal, which is especially useful for Commando when extending the zed time.
+!!! info "Команда `ClearCorpses` широко используется игроками CD для быстрого удаления тупов зедов, что особенно полезно для коммандоса при продлевании зед-тайма, но также полезно и для остальных перков."
 
-If you're a CD player and actively use such commands, it's recommended to bind them both on the same button:
+Если вы играете CD и активно используете эту команду, рекомендую назначить обе на одну и ту же клавишу:
 
 `setbind ThumbMouseButton2 "ClearCorpses|CorpseCleanup"`
 
-!!! note annotate "Note"
-    There's a setting in the `KFGame.ini` responsible for the maximum number of corpses displayed at one time called `MaxDeadBodies`. You might want to set it to the lowest possible value which is `4` to increase the visual clarity during gameplay without compromising image quality.
+!!! note annotate "Заметка"
+    В `KFGame.ini` есть параметр, отвечающий за максимальное число трупов, отображаемых на карте единовременно, который называется `MaxDeadBodies`. Будет полезно установить значение параметра на минимальное возможное (т.е. `4`) чтобы улучшить визуальную читаемость картинки во время игры, не жертвуя качеством картинки.
 	
-    * Make sure your game isn't running (no, seriously);
-    * Navigate to `..\Documents\My Games\KillingFloor2\KFGame\Config`;
-	* There will be the file named `KFGame.ini`;
-	* Open it with Notepad, [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus/releases) or any other text editing software; (1)
-	* Use search option (Ctrl+F) to find the needed line;
-	* Change the value to `4` and save the file.
-1.  I recommend using Notepad++ because it has the functionality beyond any basic needs and has massive customisation options, such as custom themes, syntaxes etc.
+	* Убедитесь что игра не запущена (не, я серьёзно);
+	* Откройте папку `..\Documents\My Games\KillingFloor2\KFGame\Config`;
+	* В ней будет файл `KFGame.ini`;
+	* Откройте его Блокнотом, [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus/releases), Sublime, VSCode или другой софт; (1)
+	* Используя поиск (Ctrl+F), найдите нужную строчку;
+	* Измените значение на `4` и сохраните файл.
+1.  Рекомендую использовать Notepad++, т.к. он имеет широкий функционал свыше базовых требований и широкую кастомизацию, например темы, синтаксисы и т.д. Ну или VSCode, как я например.
 
-## What commands?
+## Что за команды?
 
-There's plenty of commands available to use, but of course you don't need all of them to spend time on the servers.
+Доступных команд много, но для комфортного проведения времени на серверах вам, конечно, не нужны все из них.
 
-But the question is, what makes the most difference in terms of difficulty?
+Но какие команды имеют наибольший эффект на игровой процесс?
 
 ### Max Monsters
 
-[`!mm`](commands.md#max-monsters) or [`MaxMonsters`](commands.md#max-monsters) is responsible for a good half of the action during a match since it controls how much zeds are present on map at one time.
-Vanilla 6-player match has this value capped at 32 (36 on SPB-GS), while default value for HoE+ is 56.
+[`!mm`](commands.md#max-monsters) или [`MaxMonsters`](commands.md#max-monsters) ответственна за добрую половину движа во время игры, т.к. она контролирует сколько зедов могут присутствовать на карте единовременно.
+В ванильном матч при 6 игроках это значение ограничено до 32 (36 на SPB-GS), в то время как стандартное значение на HoE+ - 56.
 
-* The general idea of custom MaxMonsters tweaks is to be higher than vanilla but just enough to keep the good flow of enemies throughout the game.
+* Общая идея ручной настройки MaxMonsters заключается в том чтобы значение было выше чем ванильное, но достаточное для хорошего потока зедов в ходе волн. 
   
-* Some maps are very CQC-oriented (like most of the holdout maps for example), and some have their spawns scattered across the area which makes the flow significantly slower (Desolation Original, Dust maps, Crystal Caverns etc.), so they might require a different approach on adjusting MaxMonsters.
+* Некоторые карты ориентированы на ближний бой (как, например, большая часть holdout-карт), а на некоторых точки спавна распростёрты по всей карте, из-за чего поток зедов может быть медленным (Desolation Original, карты Dust, Crystal Caverns и т.д.), поэтому разные карты могут потребовать разные настройки MaxMonsters.
 
-* According to our experience, holdout maps like Power Core are best played at 48mm (and less) because they tend to get overly intense at a higher mm and have performance issues, while huge maps might still be comfortable enough at 64mm.
+* По нашему опыту holdout-карты по типу Энергоядра (Power Core) играются лучше на 48mm (и менее) потому что зачастую при высоком значении MM спавны на них ощущаются чересчур интенсивными, а также наблюдаются проблемы с производительностью, в то время как на просторных картах можно комфортно играть при значениях 64mmи выше.
 
-* 72mm is considered an extreme value for pub gaming and is not recommended since the game can become excessively chaotic and cause performance issues because of the amount of live creatures on map.
+* 72mm считается экстремальным значением для игры на пабах и не рекомендуется его задавать, т.к. игра может становиться слишком хаотичной и вызывать проблемы с производительностью из-за большого количества ботов на карте.
 
-* By default MaxMonsters scales up with the number of alive players (12 -> 36 on Vanilla and 18 -> 56 on HoE+), so keep that in mind when adjusting its value manually through commands.
+* По умолчанию MaxMonsters изменяется динамически с числом __живых__ игроков на карте (12 -> 36 на ванилле и 18 -> 56 на HoE+), это нужно иметь в виду при ручной настройке значений через команды.
 
-* If you want to make slight adjustments to the vanilla difficulty, this is the perfect setting for you, though changing it on HoE+ will make no sense; it's already set to somewhat optimal values. Only case where it'd make sense is when there's less than 6 players and you want something specific for the current match.
+* Если вам хочется внести относительно небольшие изменения в ванильную сложность, то это самая подходящая для этого настройка; изменять её на HoE+, впрочем, бессмысленно — оно уже стоит на оптимальных значениях. Это имеет смысл изменять только в случае когда в матче менее 6 игроков и вам, например, хочется загнать себя в особые условия.
 
-* The maximum value is capped at 200 for safety reasons.
-
-*[CQC]: Close Quarters Combat
+* Максимальное значение ограничено до 200 в целях безопасности.
 
 ### Special Squads
 
-[`!sscp`](commands.md#special-squad-count-pct) or [`Special Squad Count Percentage`](commands.md#special-squad-count-pct) is your best friend in terms of difficulty adjustments when it comes to HoE+ gameplay.
-This is where most of the magic happens since more Mediums and Larges essentially means more challenge. As mentioned [here](customspawns.md), this option is enabled by default on all HoE+ servers and disabled on Vanilla for obvious reasons.
+[`!sscp`](commands.md#special-squad-count-pct) или [`Special Squad Count Percentage`](commands.md#special-squad-count-pct) — ваш лучший друг в плане настройки сложности, когда речь заходит за геймплей HoE+.
+Вся магия происходит здесь, поскольку увеличение числа бигов[^2] и медиумов[^1] означает больший вызов в плане сложности. Как было упомянуто [здесь](customspawns.md), эта механика включена по умолчанию на всех HoE+ серверах, и выключена на ванилле по понятным причинам.
 
-* Since quality and quantity of the zeds define most of the game difficulty, you might want to adjust this setting in order for it to fit the current lobby's needs, which means as increasing the values so its lowering.
+* Поскольку качество и количество зедов определяют большую часть сложности игры, можно использовать этот параметр для настройки сложности под нужды текущего лобби, причём в обе стороны.
 
-* The default values are usually enough for most of the pub players' needs, but sometimes there's enough trusted people in the lobby to raise the stakes and try something more challenging, so having 0.5-0.7 (or 50-75%) of special squads might be a good challenge.
+* Обычно стандартных значений достаточно для комфортной игры на пабах, но иногда надёжных людей на сервере достаточно чтобы поднять ставки и попробовать что-то более сложное, поэтому значения special squad'ов в районе 0.5-0.7 (or 50-75%) могут быть подходящим челленджем.
 
-* I encourage you to __not__ crank it up just for shits and giggles, because playing a coop game means respecting the preference of your teammates; if you happen to have higher authority level, please ask your teammates whether they want it if you're not sure about it.
+* Настоятельно рекомендую __не__ выкручивать эту настройку просто ради прикола, потому что играть в кооперативе означает уважать предпочтения других игроков; если у вас есть соответствующий уровень доступа, будьте добры, советуйтесь с тиммейтами если не знаете, хотят ли они изменения настроек или нет. 
 
-* I know most of the playerbase on Precision servers, so I'm familiar with these people's performance and can tell whether it's alright to set certain settings; however you may not be like me in this regard, so you are the only person responsible for your actions; keep this in mind when changing this setting.
+* Я знаком с большей частью аудитории Precision-серверах, поэтому я знаю как люди играют и могу оценить стоит ли менять настройки в ту или иную сторону; у вас всё может быть по-другому, поэтому вся ответственность за изменение настроек лежит на вас; имейте это в виду когда изменяете что-либо вручную.
 
-* While it's still technically possible to enable `!sscp` on Vanilla, I don't recommend doing this because it drastically changes the feel of the game and contradicts the whole idea of dividing the servers onto Vanilla and HoE+; you better just go on HoE+ and lower the settings there if they're too high for your liking.
+* Пусть `!sscp` и можно включить на ванилле, я не рекомендую этим заниматься, потому что это значительно изменяет сложность игры и противоречит как таковой задумке разделения серверов на ванильные и HoE+; в этой связи лучше уж пойти на HoE+ и может быть снизить настройки там если они слишком высокие для вас.
 
 ### AI Difficulty
 
-[AI Difficulty](aidifficulty.md) system is responsible for various zed presets, rounding up the final difficulty level that you can achieve on the servers.
+Система [AI Difficulty](aidifficulty.md) ответственна за различные пресеты зедов, ставя точку в формировании сложности игры которую можно достигнуть на этих серверах.
 
-If not enabled by default, it can be switched on by setting [`!dcad`](commands.md#disable-custom-ai-difficulty) to `false`, and adjusted with [`!ad`](commands.md#ai-difficulty) set to proper [index](aidifficulty.md#available-presets).
+Если опция не включена по умолчанию, она может быть включена установкой [`!dcad`](commands.md#disable-custom-ai-difficulty) на `false`, и настроена командой [`!ad`](commands.md#ai-difficulty) с соответствующим [индексом](aidifficulty.md#available-presets).
 
-!!! info "As mentioned [here](aidifficulty.md#available-presets), not all presets are available on Vanilla servers for safety reasons."
+!!! info "Как было упомянуто [здесь](aidifficulty.md#available-presets), на ванилле доступны не все пресеты в качестве защитного ограничения."
 
-* [`!dcad`](commands.md#disable-custom-ai-difficulty) set to `false` enables the system, `true` turns it off; enabled by default on Precision/HoE+ servers.
+* [`!dcad`](commands.md#disable-custom-ai-difficulty) установленная на `false` включает систему, `true` соответственно выключает; включена по умолчанию на Precision/HoE+ серверах.
 
-* [`!ad`](commands.md#ai-difficulty) [`<index>`](aidifficulty.md#available-presets) sets the current difficulty preset, applying changes instantly.
+* [`!ad`](commands.md#ai-difficulty) [`<index>`](aidifficulty.md#available-presets) устанавливает текущий пресет сложности зедов, применяя изменения сразу при вводе команды.
 
-* Changing this setting makes the huge difference in terms of difficulty, so please be mindful of that whenever and with whoever you play.
+* Изменение этой опции даёт значительный эффект в плане сложности, поэтому относитесь ответственно к её настройке, как и с кем бы вы ни играли.
 
-* It is not recommended to play anything beyond [`Pivo`](aidifficulty.md#ai-difficulty-presets) if there's no proper lobby for it, especially if there's less than 6 players, because that's one way to end up wiped out relentlessly. Note my words.
+* Не рекомендую играть с пресетами выше чем [`Pivo`](aidifficulty.md#ai-difficulty-presets) если нет соответствующего лобби, особенно если в матче менее 6 игроков, потому что таким образом получается игра через терпение и превозмогание, в которой очень легко опиздюлиться. Я не шучу.
+
+### Настройки числа зедов
+
+Ещё один способ настройки сложности — это настройка [множителя длины волн](commands.md#wave-size-multiplier).
+
+!!! note "Заметка"
+	Не выкручивайте эту настройку на экстремальные значения! Она может сделать игру неиграбельной, особенно если число зедов и множитель патронов не подогнанны друг под друга.
+
+	Если вы всё-таки меняете эту настройку, то хотя бы учитывайте множитель патронов, который настраивается с помощью [ammo multiplier'а](commands.md#ammo-multiplier).
+
+* В оригинальной игре на сложности Hell on Earth при 6 игроках на 9-10 волнах выходит `321` зед;
+
+* На Precision/HoE+ серверах это число равно `360`, что эквивалентно числу зедов при 9 игроках;
+
+* Ванильные матчи при 36mm и стандартном количестве зедов длятся примерно `40-45` минут, в то время как на Precision-серверах с 56mm и увеличенным количеством зедов матчи длятся в районе `30-35`;
+
+* Приведённая статистика достаточно показательна в том плане, что соотношение длины волны и числа MaxMonsters непосредственным образом влияет на продолжительность матча;
+
+* Геймплей на Precision-серверах был выстроен таким образом, чтобы предоставлять концентрированный игровой опыт, но при этом не слишком затянутый по времени;
+
+* В связи с этим при изменении длины волн стоит учитывать то, как изменится флоу игры, и насколько комфортно будет играть такой матч в долгосрочной перспективе.
+
+[^1]: Медиумы (Mediums) — это Сирены, Толстяки, Хаски и Берсеркеры.
+[^2]: Биги или ларджи (Larges) — это Мясники и Отбивальщики.

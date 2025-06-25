@@ -31,7 +31,7 @@ For safety reasons the accessibility of certain commands is different across the
 | [!lowp](commands.md#lock-other-weapon-pickup) | Player | Player | - | - |
 | [!swpm](commands.md#show-weapon-pickup-messages) | Player | Player | - | - |
 | [!wpat](commands.md#weapon-pickup-ammo-threshold) | Player | Player | - | - |
-| [!dit](commands.md#disable-item-drop)  | Player | Player | - | - |
+| [!dit](commands.md#disable-item-drop) | Player | Player | - | - |
 | [!pt](commands.md#pause-trader) | Helper | Helper | `True` | `True` |
 | [!upt](commands.md#unpause-trader) | Helper | Helper | `True` | `True` |
 | [!st](commands.md#skip-trader) | Helper | Helper | `False` | `False` |
