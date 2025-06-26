@@ -30,7 +30,7 @@
 	* Убедитесь что игра не запущена (не, я серьёзно);
 	* Откройте папку `..\Documents\My Games\KillingFloor2\KFGame\Config`;
 	* В ней будет файл `KFGame.ini`;
-	* Откройте его Блокнотом, [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus/releases), Sublime, VSCode или другой софт; (1)
+	* Откройте его Блокнотом, [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus/releases), Sublime, VSCode или другим софтом; (1)
 	* Используя поиск (Ctrl+F), найдите нужную строчку;
 	* Измените значение на `4` и сохраните файл.
 1.  Рекомендую использовать Notepad++, т.к. он имеет широкий функционал свыше базовых требований и широкую кастомизацию, например темы, синтаксисы и т.д. Ну или VSCode, как я например.
