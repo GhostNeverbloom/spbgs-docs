@@ -6,6 +6,16 @@ This is the knowledge base that will guide you through all the basics including 
 
 !!! info "This documentation is in active development, so there will be more content in near future."
 
+## External resources:
+
+[Server stats & monitoring](http://stats.eyesdeep.blue)
+
+[SPB-GS Steam group](https://steamcommunity.com/groups/SPB-GS)
+
+[Support my work](https://boosty.to/ghost_neverbloom)
+
+## SPB-GS Docs Overview
+
 Here is a quick overview of the SPB-GS Docs content:
 
 <div class="grid cards" markdown>

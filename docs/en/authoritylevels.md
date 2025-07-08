@@ -14,7 +14,7 @@ All chat commands work under the role authority system. This is how it works:
 
 * The authority level requirements for each command can be different depending on which server they're used on;
 
-* More detailed info on authority levels you can find [below](#authority-levels).
+* More detailed info on the authority levels you can find [below](#authority-levels).
 
 [](){ #authority-levels }
 ## Authority Levels
