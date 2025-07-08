@@ -4,7 +4,7 @@
 
 There is two ways of using commands on the servers: through [in-game chat](commands.md) and the radial menu.
 
-A custom radial command menu is available through pressing `J` in the game. It can be bound to any different hotkey by editing the `KFInput.ini`. Though it's possible to rebind it through the `setbind <key> GBA_ShowVoteComms` console command, I recommend doing it manually through `KFInput.ini` because otherwise there's a good chance that the keybind lines will duplicate and read incorrectly next time you visit servers.
+A custom radial command menu is available through pressing `J` in the game. It can be bound to any other hotkey by editing the `KFInput.ini`. Though it's possible to rebind it through the `setbind <key> GBA_ShowVoteComms` console command, I recommend doing it manually through `KFInput.ini` because otherwise there's a good chance that the keybind lines will duplicate and read incorrectly next time you visit servers.
 
 ??? question "How to edit ^^KFinput.ini^^?"
 
