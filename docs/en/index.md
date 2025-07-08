@@ -1,6 +1,6 @@
 # Basic info
 
-If you're ended up here, most likely you're familiar enough with SPB-GS servers and made your way in here on purpose.
+If you're ended up here, most likely you're familiar enough with [SPB-GS](https://steamcommunity.com/groups/SPB-GS) servers and made your way in here on purpose.
 
 This is the knowledge base that will guide you through all the basics including main features, working with commands and HoE+ gameplay.
 

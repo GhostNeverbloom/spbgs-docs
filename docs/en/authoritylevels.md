@@ -61,8 +61,8 @@ For safety reasons the accessibility of certain commands is different across the
 | [!dcad](commands.md#disable-custom-ai-difficulty) | Moderator | Helper | `True` | `True` |
 | [!pl](commands.md#player-list) | Player | Player | - | - |
 | [!kill](commands.md#kill) | Moderator | Moderator | `False` | `False` |
-| [!kick](commands.md#kick) | Helper | Helper | `True` | `True` |
-| [!kicksessionban](commands.md#kick-session-ban) | Helper | Helper | `True` | `True` |
+| [!kick](commands.md#kick) | Moderator | Moderator | `False` | `False` |
+| [!kicksessionban](commands.md#kick-session-ban) | Moderator | Moderator | `False` | `False` |
 | [!ff](commands.md#friendly-fire) | Moderator | Moderator | `True` | `True` |
 | [!bp](commands.md#burn-player) | Moderator | Moderator | `False` | `False` |
 | [!pp](commands.md#puke-player) | Moderator | Moderator | `False` | `False` |

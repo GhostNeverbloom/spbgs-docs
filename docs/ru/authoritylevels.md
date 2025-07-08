@@ -61,8 +61,8 @@
 | [!dcad](commands.md#disable-custom-ai-difficulty) | Модератор | Помощник | `Да` | `Да` |
 | [!pl](commands.md#player-list) | Игрок | Игрок | - | - |
 | [!kill](commands.md#kill) | Модератор | Модератор | `Нет` | `Нет` |
-| [!kick](commands.md#kick) | Помощник | Помощник | `Да` | `Да` |
-| [!kicksessionban](commands.md#kick-session-ban) | Помощник | Помощник | `Да` | `Да` |
+| [!kick](commands.md#kick) | Модератор | Модератор | `Нет` | `Нет` |
+| [!kicksessionban](commands.md#kick-session-ban) | Модератор | Модератор | `Нет` | `Нет` |
 | [!ff](commands.md#friendly-fire) | Модератор | Модератор | `Да` | `Да` |
 | [!bp](commands.md#burn-player) | Модератор | Модератор | `Нет` | `Нет` |
 | [!pp](commands.md#puke-player) | Модератор | Модератор | `Нет` | `Нет` |

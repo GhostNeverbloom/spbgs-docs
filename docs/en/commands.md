@@ -79,7 +79,7 @@ These commands are available for everyone to use without any limitations.
 | [](){ #pause-trader }pausetrader | pt | | Temporarily pauses trader time; lasts 180 seconds and then auto-resumes |
 | [](){ #unpause-trader }unpausetrader | upt | | Resumes trader time |
 | [](){ #skip-trader }skiptrader | st | | Skips trader time; not available for voting because vanilla skip trader option exists |
-| [](){ #kill-zeds }killzeds | kz | | Kills 5 alive zeds; has 180s long usage cooldown. Use when need to kiil stuck zeds on certain maps |
+| [](){ #kill-zeds }killzeds | kz | | Kills 5 alive zeds; has 120s long usage cooldown. Use when need to kiil stuck zeds on certain maps |
 | [](){ #next-map }nextmap | nm | `<KF-MapName>` | Instantly switches current map to the specified one |
 | [](){ #set-current-wave }setcurrentwave | scw | `<number>` | Starts a wave specified by its number |
 | [](){ #end-wave }endwave | ew | | Ends current wave |

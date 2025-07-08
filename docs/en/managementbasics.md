@@ -4,9 +4,27 @@
 
 There is two ways of using commands on the servers: through [in-game chat](commands.md) and the radial menu.
 
-A custom radial commands menu is available through pressing `J` in the game. Currently its key is forced through server-side and cannot be bound to any different hotkey. Though it's possible to rebind it through the `setbind <key> GBA_ShowVoteComms` console command, it will only work during the current session and will revert back when you re-join the server. We'll continue working on the feature and improve its functioning in future.
+A custom radial command menu is available through pressing `J` in the game. It can be bound to any different hotkey by editing the `KFInput.ini`. Though it's possible to rebind it through the `setbind <key> GBA_ShowVoteComms` console command, I recommend doing it manually through `KFInput.ini` because otherwise there's a good chance that the keybind lines will duplicate and read incorrectly next time you visit servers.
 
-It has a selection of commands serving as a shortcut for those who don't want to remember or type the most used commands. Executing them through both the chat and the command selector has the same effent and is entirely equivalent.
+??? question "How to edit ^^KFinput.ini^^?"
+
+    * Make sure your game isn't running;
+
+    * Navigate to `..\Documents\My Games\KillingFloor2\KFGame\Config`;
+
+	* There will be the file named `KFinput.ini`;
+
+	* Use the search option (Ctrl+F) to find the following line:
+
+        ``` ini
+		Bindings=(Name="J",Command="GBA_ShowVoteComms",Control=False,Shift=False,Alt=False,bIgnoreCtrl=False,bIgnoreShift=False,bIgnoreAlt=False)
+		```
+
+    * Change the key from `J` to any other button of your preference.
+
+	!!! warning "There's another similar line which contains `GBA_ShowVoteComms` in its name field. Do not modify it, otherwise it may break the functionality of the command menu."
+
+This menu has a selection of commands serving as a shortcut for those who don't want to remember or type the most used commands. Executing them through both the chat and the command selector has the same effent and is entirely equivalent.
 
 !!! info "Note that the behaviour of some commands is [different](authoritylevels.md#authority-levels) on Vanilla and HoE+, and so is the exact selection of commands in the menu."
 
@@ -20,7 +38,7 @@ Apart from that, there is a useful console comamnd that's unique for all SPB-GS 
 
 !!! info "The `ClearCorpses` command is widely used by CD players for quick zed corpse removal, which is especially useful for Commando when extending the zed time, though is used by the rest of the perks."
 
-If you're a CD player and actively use such commands, it's recommended to bind them both on the same button:
+If you're a CD player and actively use such commands, it's recommended to bind them both to the same button:
 
 `setbind ThumbMouseButton2 "ClearCorpses|CorpseCleanup"`
 
@@ -31,7 +49,7 @@ If you're a CD player and actively use such commands, it's recommended to bind t
     * Navigate to `..\Documents\My Games\KillingFloor2\KFGame\Config`;
 	* There will be the file named `KFGame.ini`;
 	* Open it with Notepad, [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus/releases), Sublime, VSCode or any other text editing software; (1)
-	* Use search option (Ctrl+F) to find the needed line;
+	* Use the search option (Ctrl+F) to find the needed line;
 	* Change the value to `4` and save the file.
 1.  I recommend using Notepad++ because it has the functionality beyond any basic needs and has massive customisation options, such as custom themes, syntaxes etc. Or just use VSCode like me.
 

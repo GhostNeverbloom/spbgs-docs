@@ -74,7 +74,7 @@ There are few presets of zeds defined by their index:
 
     1.  * Zeds don't fight with each other;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Zeds don't triumph on player kill;
 
         * Removed 10% movement speed randomization from Vanilla.
 
@@ -121,7 +121,7 @@ There are few presets of zeds defined by their index:
 
     1.  * Zeds don't fight with each other;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Zeds don't triumph on player kill;
 
         * Removed 10% movement speed randomization from Vanilla.
 
@@ -170,7 +170,7 @@ There are few presets of zeds defined by their index:
 
     1.  * Zeds don't fight with each other;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Zeds don't triumph on player kill;
 
         * Removed 10% movement speed randomization from Vanilla.
 
@@ -217,7 +217,7 @@ There are few presets of zeds defined by their index:
 
     1.  * Zeds don't fight with each other;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Zeds don't triumph on player kill;
 
         * Removed 10% movement speed randomization from Vanilla.
 
@@ -266,7 +266,7 @@ There are few presets of zeds defined by their index:
 
     1.  * Zeds don't fight with each other;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Zeds don't triumph on player kill;
 
         * Removed 10% movement speed randomization from Vanilla.
 
@@ -350,7 +350,7 @@ There are few presets of zeds defined by their index:
 
     1.  * Zeds don't fight with each other;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Zeds don't triumph on player kill;
 
         * Removed 10% movement speed randomization from Vanilla.
 
@@ -460,7 +460,7 @@ There are few presets of zeds defined by their index:
 
     1.  * Zeds don't fight with each other;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Zeds don't triumph on player kill;
 
         * Removed 10% movement speed randomization from Vanilla.
 
@@ -605,7 +605,7 @@ There are few presets of zeds defined by their index:
 
     1.  * Zeds don't fight with each other;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Zeds don't triumph on player kill;
 
         * Removed 10% movement speed randomization from Vanilla.
 
@@ -710,7 +710,7 @@ There are few presets of zeds defined by their index:
 
     1.  * Zeds don't fight with each other;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Zeds don't triumph on player kill;
 
         * Removed 10% movement speed randomization from Vanilla.
 
@@ -788,7 +788,7 @@ There are few presets of zeds defined by their index:
 
     1.  * Zeds don't fight with each other;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Zeds don't triumph on player kill;
 
         * Removed 10% movement speed randomization from Vanilla.
 
@@ -877,7 +877,7 @@ There are few presets of zeds defined by their index:
 
     1.  * Zeds don't fight with each other;
 
-        * Zeds don't triumph on player kill (currently bugged and so is disabled);
+        * Zeds don't triumph on player kill;
 
         * Removed 10% movement speed randomization from Vanilla.
 
