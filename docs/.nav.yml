@@ -1,5 +1,6 @@
 nav:
   - index.md
+  - changelog.md
   - commands.md
   - authoritylevels.md
   - managementbasics.md
