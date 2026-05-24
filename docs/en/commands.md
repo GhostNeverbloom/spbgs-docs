@@ -33,8 +33,9 @@ These commands are available for everyone to use without any limitations.
 | [](){ #show-weapon-pickup-messages }showweaponpickupmessages | swpm | `<true/false>` | Enables personal chat logging for weapon pick ups. For example, you can see if someone picks up your or someone else's gun |
 | [](){ #weapon-pickup-ammo-threshold }weaponpickupammothreshold | wpat | `<int value from 0 to 100>` | Locks empty weapons from picking up during waves by setting the ammo threshold below which weapons can't be picked up (measured in %) |
 | [](){ #disable-item-drop }disableitemdrop  | dit | `<true/false>` | If `true`, prevents items from dropping into Steam inventory on match end; enable if you feel tired from receiving unnecessary stuff into your inventory |
+| [](){ #zed-time-effect }zedtimeeffect  | zte | `<true/false>` | If set to `false`, disables desaturation effect during ZED time; by default it's set to (`true`) |
 
-!!! info "Commands related to spare guns and item drops will save locally into your configs, so make sure to not have them in `read-only` mode in order for them to work properly."
+!!! info "Commands related to spare guns, item drops and ZED time effects will save locally into your configs, so make sure to not have them in `read-only` mode in order for them to work properly."
 
 ??? question "How weapon pickup system works?"
 
