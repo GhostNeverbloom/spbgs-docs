@@ -18,7 +18,7 @@ This hotfix solves few bugs and does some rebalance to the previously made chang
 
 * Fixed an issue that caused [KS-23](changelog.md#ks23-announcement)'s flashbang projectile to not automatically detonate after travelling specified distance, and its maximum travelling distance is changed from 15 to 20 meters.
 
-* Damage and stumble power for the [KS-23](changelog.md#ks23-announcement) is now increased, as well as the stun power of it's flashbang round; now large zeds can be stunned with just one flashbang round.
+* Damage and stumble power for the [KS-23](changelog.md#ks23-announcement) is now increased, as well as the stun power of its flashbang round; now large zeds can be stunned with just one flashbang round.
 
 * Reload speed for the [KS-23](changelog.md#ks23-announcement) increased by 25%, and its swap animations are 2x faster.
 
@@ -27,6 +27,8 @@ This hotfix solves few bugs and does some rebalance to the previously made chang
 * [HoE+] Support's Dual HRG Buckshot Revolvers recieved slight reload speed bonus (`+15%` instead of `+10%`). They're cool by the way! At a 5 meters range though.
 
 * [HoE+] Applied more balance adjustments to the weapon upgrades for the Support perk so that they'd work better in loadouts.
+
+* Fixed [stats website](http://stats.eyesdeep.blue) which was broken after the update due to the new perk system.
 
 It's possible that I'll add a passive skill for quicker swap between Support's weapons on HoE+, but only playtests will show whether that's needed or not.
 
