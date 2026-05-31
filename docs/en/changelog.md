@@ -1,6 +1,34 @@
 # Updates & Patch Notes
 
-This is where you can find the change logs for the latest updates starting from May 2026.
+This is where you can find the changelogs for the latest updates starting from May 2026.
+
+## May 31, 2026
+
+This hotfix solves few bugs and does some rebalance to the previously made changes.
+
+* Fixed an issue that allowed players to swap perk skills mid wave.
+
+* [HoE+] Fixed reload speed adjustment system on SPX 464 Centerfire for the Sharpshooter perk.
+
+* [HoE+] All shotguns have recieved their vanilla penetration values back (`2`), which means they can penetrate up to 2 zeds at once; this has been reverted since it doesn't affect the gameplay in a bad way as long as there's no penetration bonuses on top of that from the Support perk itself.
+
+* [HoE+] Support's passive [skill](changelog.md#armor-regen-passive) which allowed players to regenerate armor during ZED time is now an active skill on level 25 (left) and replaces [^^"Sleight of Hand"^^](changelog.md#support-sleightofhand) skill; now it's called ^^"Tactical Armor"^^ and regenerates 15 armor points instantly once ZED time is triggered, then gives 1 armor point per second to the Support themselves and their teammates in a radius of 8 meters for the duration of ZED time. It also allows to move and swap perk weapons 4x faster during ZED time (80% of real-time). So I guess it's time to do some armor delivery job, huh?
+
+* [HoE+] Support's [^^"Barrage"^^](changelog.md#support-barrage) skill on level 25 (right) now allows to shoot and reload in real-time during ZED time.
+
+* Fixed an issue that caused [KS-23](changelog.md#ks23-announcement)'s flashbang projectile to not automatically detonate after travelling specified distance, and its maximum travelling distance is changed from 15 to 20 meters.
+
+* Damage and stumble power for the [KS-23](changelog.md#ks23-announcement) is now increased, as well as the stun power of it's flashbang round; now large zeds can be stunned with just one flashbang round.
+
+* Reload speed for the [KS-23](changelog.md#ks23-announcement) increased by 25%, and its swap animations are 2x faster.
+
+* [HoE+] Support's starting shotgun Mossberg 500 recieved 20% damage increase, slight bonus to the firing rate and accuracy/spread debuff, which allows using the gun for splash damaging small zeds way more effective.
+
+* [HoE+] Support's Dual HRG Buckshot Revolvers recieved slight reload speed bonus (`+15%` instead of `+10%`). They're cool by the way! At a 5 meters range though.
+
+* [HoE+] Applied more balance adjustments to the weapon upgrades for the Support perk so that they'd work better in loadouts.
+
+It's possible that I'll add a passive skill for quicker swap between Support's weapons on HoE+, but only playtests will show whether that's needed or not.
 
 ## May 26, 2026
 
@@ -18,7 +46,7 @@ And, of course, the headliner of this update is the Saiga-12 semi-automatic shot
 <source src="http://eyesdeep.blue/videos/KF2_S12_Demo_001.mp4" type="video/mp4">
 </video>
 
-Apart from that the Support's got another tool worth of your attention which is the KS-23 riot shotgun. It's been added to both Vanilla and HoE+ servers. More on that in its respective section below.
+Apart from that the Support's got another tool worth of your attention which is the [](){ #ks23-announcement }KS-23 riot shotgun. It's been added to both Vanilla and HoE+ servers. More on that in its respective section below.
 
 <video autoplay loop muted playsinline>
 <source src="http://eyesdeep.blue/videos/KF2_KS23_Demo_002.mp4" type="video/mp4">
@@ -38,11 +66,11 @@ Apart from that the Support's got another tool worth of your attention which is 
 
     * ^^"Tight Choke"^^ skill on level 15 (right) now decreases shot spread of perk weapons by 25% instead of 50%. This is because there's passive skill that boosts the same stat now, so together they give +50% bonus on level 25, just like it used to be in the vanilla game. The difference is that you can have the accuracy bonus without using this skill, which allows using different builds;
 
-    * ^^"ZED TIME - Penetrator"^^ skill on level 25 (left) doesn't give any penetration bonuses anymore, so its primary feature is real-time reload speed during ZED time; now this skill is called ^^"ZED TIME - Sleight of Hand"^^;
+    * ^^"ZED TIME - Penetrator"^^ skill on level 25 (left) doesn't give any penetration bonuses anymore, so its primary feature is real-time reload speed during ZED time; now this skill is called [](){ #support-sleightofhand }^^"ZED TIME - Sleight of Hand"^^;
 
-    * ^^"ZED TIME - Barrage"^^ skill on level 25 (right) allows to shoot in real-time during ZED time (compared to shooting in near real-time before changes);
+    * [](){ #support-barrage }^^"ZED TIME - Barrage"^^ skill on level 25 (right) allows to shoot in real-time during ZED time (compared to shooting in near real-time before changes);
 
-    * Added brand new passive skill that regenerates up to 5 armor points instantly each ZED time tick and also slowly regenerates 2 armor points per each ZED time extension. Overall it's possible to regenerate 35+14 armor points for the duration of full ZED time (21 seconds). But the question is, will anybody extend it for you?
+    * Added [](){ #armor-regen-passive }brand new passive skill that regenerates up to 5 armor points instantly each ZED time tick and also slowly regenerates 2 armor points per each ZED time extension. Overall it's possible to regenerate 35+14 armor points for the duration of full ZED time (21 seconds). But the question is, will anybody extend it for you?
 
     !!! note "Note"
 
