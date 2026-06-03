@@ -2,7 +2,7 @@
 
 [](){ #special-squad-count-pct-def }[Special Squad Count Percentage](commands.md#special-squad-count-pct) (or Custom Spawn System) was designed in order to implement harder yet highly flexible difficulty system to create more challenging experience across all servers including HoE+. This is the former feature of HoE+ mode which makes the most difference in terms of difficulty.
 
-By default, servers #05.1, #06, #07 and #08 have custom spawn system enabled.
+By default, servers #05.1, #06, #07, #07.1 and #08 have custom spawn system enabled.
 
 Related commands:
 
