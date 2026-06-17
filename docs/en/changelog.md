@@ -2,6 +2,38 @@
 
 This is where you can find the changelogs for the latest updates starting from May 2026.
 
+## June 17, 2026
+
+A hotfix prior to a larger update that's coming soon.
+
+* Fixed an issue that caused ammo muliplier to reset after manual adjustments through [`!ammomultiplier`](commands.md#ammo-multiplier) command;
+
+* Fixed an issue that allowed perk skills to work despite them being locked under low level;
+
+* Stats for the new [Saiga-12](changelog.md#saiga12-announcement) have been fully reverted to the Vanilla values since they weren't quite justified and originally came over from HoE+ balance system.
+
+- [HoE+] Gunslinger's Glock 18C pistol got a rework:
+
+    * Animations were replaced with the better ones taken from other pistols;
+
+    * Recoil and bullet spread were reworked so that the accuracy is more relied on spray control rather than random spread;
+
+    * Firing rate and damage were changed according to the new recoil so that it's more balanced in terms of time to kill of [large] zeds farther down range;
+
+    * Weight points were reduced to `3` for the single version and `6` for the dual wielded one.
+
+Known issues:
+
+* XP gain progress doesn't show up mid game and is only visible after match ends;
+
+* SWAT's ^^"Close Combat Training"^^ skill doesn't provide dual 9mm pistols at the start of the match.
+
+Upcoming balance changes:
+
+* [HoE+] Increased projectile speed for Support's weapons during ZED time and in real-time;
+
+* [HoE+] Next iteration of Support's skill rebalance aimed towards better diversity between builds depending on the play style.
+
 ## May 31, 2026
 
 This hotfix solves few bugs and does some rebalance to the previously made changes.
@@ -42,7 +74,7 @@ The most annoying thing about vanilla Support is that their bullets can penetrat
 
 ### Saiga-12 & KS-23
 
-And, of course, the headliner of this update is the Saiga-12 semi-automatic shotgun, which replaces the vanilla S12 Shockgun. Its stats remained the same as vanilla except for few common Support perk changes. The shockwave ammo capacity was changed and it's been moved to Tier 5.
+And, of course, the headliner of this update is the [](){ #saiga12-announcement }Saiga-12 semi-automatic shotgun, which replaces the vanilla S12 Shockgun. Its stats remained the same as vanilla except for few common Support perk changes. The shockwave ammo capacity was changed and it's been moved to Tier 5.
 
 <video autoplay loop muted playsinline>
 <source src="http://eyesdeep.blue/videos/KF2_S12_Demo_001.mp4" type="video/mp4">

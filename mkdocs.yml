@@ -51,10 +51,10 @@ plugins:
           name: English
           build: true
           link: /en/
-        - locale: pl
-          name: Polski
-          build: true
-          link: /pl/
+        # - locale: pl
+        #   name: Polski
+        #   build: true
+        #   link: /pl/
 
   - search
   - awesome-nav
