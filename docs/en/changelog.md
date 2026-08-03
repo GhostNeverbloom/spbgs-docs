@@ -2,6 +2,76 @@
 
 This is where you can find the changelogs for the latest updates starting from May 2026.
 
+## August 1, 2026
+
+This update includes several bug fixes and some new content, new starting weapons on HoE+ servers to be precise. 
+
+Some features were rolled out in advance for testing purposes, but now all planned content is fully rolled out.
+
+### Bug Fixes and Balance Changes
+
+* Fixed a bug that caused SWAT grenade to disappear during the game due to it not being set by default;
+
+* SWAT's ^^"Close Combat Training"^^ skill now provides dual 9mm pistols at the start of the match as it's supposed to;
+
+* Ammo disappearance after wave completion due to bugged ammo multiplier was finally defeated (I hope so); 
+
+- [HoE+] Support perk changes:
+
+    * Projectile speed of perk weapons during ZED time is now 3 times faster;
+
+    * ^^"Fortitude"^^ skill on level 10 (left) now gives +25% health bonus instead of 50%, damage resistance remained untouched, and teammates in the proximity of 15 meters also recieve 10% damage resistance if they wear any armor;
+
+    * ^^"Salvo"^^ skill on level 10 (right) was replaced with ^^"Resupply Pack"^^ skill, while its damage bonus was transfered into respective passive skill;
+
+    * ^^"Armor Piercing Shot"^^ skill on level 15 (left) now gives 15% damage bonus;
+
+    * ^^"Resupply Pack"^^ skill's place was filled with brand new skill called ^^"High Impact Rounds"^^: hits with perk weapons will slow zeds down by 20%. Head and weak spot shots apply it twice as fast;
+
+    * ^^"Tactical Armor"^^ skill on level 25 (left) now regenerates 2 health points per second instead of one, and its effective radius is extended up to 15 meters. The rest of the bonuses were reworked in such a way that player's movement speed, weapon swap and reload speed are now 2.5x faster (or 50% of real-time).
+
+### Important Tech Update
+
+There has been made a small but quite significant change with the recent update: there's now strict FPS limit which doesn't allow to go above 240 frames per second when playing on the servers.
+
+??? info "Why and for what purpose?"
+    
+    KF2's inner architecture has a number of flaws, the most noticeable of them might be dependence between FPS and time flow during game. TLDR: the more FPS the more your game appears broken. Going even beyond 60 FPS heavily affects recoil/fire rate of the weapons, at around 200 FPS your game can "eat" messages, 300 FPS make some weapons' recoil non-existent, and 500+ FPS totally break guns to a degree that they fire and reload much faster during ZED time, which is obviously beyond all bounds of decency and shouldn't be allowed to begin with.
+
+    More detailed info about it can be found here: [ZSDR](https://www.zsdr.org/index.php/2024/06/29/quantifying-the-kf2-recoil-rate-of-fire-reloads-on-fps-dependency/)
+
+    Since this is technically an exploit of a flaw that developers have chosen to leave unattended, a hardcore part of KF2 community came up with an unspoken rule to limit their FPS in KF2 in solidarity and somewhat honesty towards each other. However, as you may have guessed, unspoken rules tend to be broken and abused very easily, which some of the players surely did. In this regard, I made a decision to set a strict FPS limit on the server side instead of making unspoken rules and exposing those who abuse high FPS.
+
+    Smaller KF2 communities came to an agreement to not go beyond 165 FPS, but since these are public servers mostly aimed at a casual audience, I tried finding a spot in between which ended up lying around 240 FPS. This value doesn't allow to break the game to a degree where it becomes straight up blatant cheating, while players with high refresh rate monitors can still enjoy their comfort zone.
+
+Since this change is an attempt to fight the exploit of the vanilla game, from now on this FPS limit is a strict rule on the servers, and whoever caught going beyond it despite server side limitation is considered a cheater, which means I will apply the same measures onto them (ban them permanently to be specifically).
+
+### Old & New Weapons
+
+<video autoplay loop muted playsinline>
+<source src="http://eyesdeep.blue/videos/KF2_SPBCW_001_Demo_002.mp4" type="video/mp4">
+</video>
+
+HoE+ servers (#05.1, #06, #07, #07.1, #08, #23 and #24) now recieved a number of new and few old reworked weapons which you can choose before the start of the game: 
+
+* ^^STM-9^^ Carbine for the Commando - AR-15's counterpart, with slightly less damage but slightly more mag capacity;
+
+* ^^TX-15 DML^^ for the Sharpshooter - Light Marksman Carbine with weaker ammo, but higher trash clearing potential on early waves;
+
+* Dual ^^Makarov 6P9^^ pistols for the Gunslinger - for those who had enough of Wild West larping on early waves;
+
+* ^^Sawed-Off Double-Barrel Shotgun^^ for the Support - same old Two Barrels, just shorter. Still capable though;
+
+* ^^HRG USP-45^^ Pistol for the Field Medic - a handgun that kills at least anything apart from the desire to play this perk;
+
+* Chiappa Rhino pistols were moved into tier 1, now they're one of the starting weapons. So they've been rebalanced for this purpose, frag bullets were removed as well as weird-ass red dot sights, and also their missing reload SFX were fixed;
+
+* SWAT's Mac-10 SMG was also moved into starting weapon tier, and rebalanced respectively;
+
+* Support's Mossberg 500 shotgun recieved a choice of ammo types between regular buckshot rounds and flechette rounds; latter ones have more spread, less damage and higher penetration power which makes it more effective against large groups of trash zeds. It also recieved higher rate of fire and reload speed.
+
+Currently all these weapons were added exclusively on HoE+ servers, but if the feedback from the players will be positive I might also add them onto vanilla servers too. I personally think that the new content is always a good thing, especially in such an old and stale game like ours.
+
 ## June 17, 2026
 
 A hotfix prior to a larger update that's coming soon.
