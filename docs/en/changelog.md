@@ -2,6 +2,38 @@
 
 This is where you can find the changelogs for the latest updates starting from May 2026.
 
+## August 8, 2026
+
+A small hotfix with a surprise gift which I will mention later.
+
+* [HoE+] TX-15 DML rifle has recieved slight damage bonus with the upgrades (around +6% on tier 4);
+
+* [HoE+] USP-45 and HMTech-101 pistols have recieved lowered recoil, higher fire rate and better healing dart efficiency;
+
+* [HoE+] All the new guns from the previous update now available on Simple Holdout servers as well, including tier 5 upgrades;
+
+* [HoE+] AF-2011 pistols on Simple Holdout servers got their tier 5 upgrade back;
+
+* [HoE+] Added VSS Vintorez rifle for the Commando.
+
+### The Vintorez
+
+<video autoplay loop muted playsinline>
+<source src="http://eyesdeep.blue/videos/KF2_VSS_Demo_001.mp4" type="video/mp4">
+</video>
+
+* A tier 4 rifle for the Commando;
+
+* Sits somewhere between SCAR-H and FN FAL, providing good DPS but limited with Assault Rifle damage type;
+
+* The weight is 7 units.
+
+I made adjustments into my sound FX mod specifically for this gun, so now Mac-10 sounds actually include VSS firing sounds which you can get here: [Sandstorm SFX Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3012601362)
+
+As I mentioned above, the VSS uses firing sounds from the Mac-10 since this is the only vanilla gun that has the same firing rate as VSS and also has the suppressor, and it's not possible to use server-side weapon sound mods due to Steam Workshop limitation. I guess all of you who tried custom sound mods from the Workshop know that you need to install them manually after subscribing to them. That's exactly because of lack of native support of sound mods, so we all have to deal with it. There's exceptions though. For example, few guns added recently do have custom first-peron firing sounds, but I had to use a workaround for it through modifying scripts and there's no way to do the same for fully-automatic guns with high firing rate.
+
+Anyway, I hope you'll enjoy this new addition, so good luck and have fun shooting zeds.
+
 ## August 1, 2026
 
 This update includes several bug fixes and some new content, new starting weapons on HoE+ servers to be precise. 
